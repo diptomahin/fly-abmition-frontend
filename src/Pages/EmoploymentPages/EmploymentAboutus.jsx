@@ -197,7 +197,7 @@ const [currentTestimonial, setCurrentTestimonial] = useState(0);
             </div>
 
             {/* Content */}
-            <div className='my-7 rounded-2xl shadow-2xl p-5 border-t-red-600 border-t-4 bg-white'>
+            <div className='my-7 rounded-2xl shadow-2xl p-5 border-y-red-600 border-y-4 bg-white'>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center">
                 Who we <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">are</span>
               </h2>
@@ -219,7 +219,7 @@ const [currentTestimonial, setCurrentTestimonial] = useState(0);
               {/* Services Icons */}
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {services.map((service, index) => (
-                  <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-red-50 transition-colors">
+                  <div key={index} className="flex flex-col md:flex-row items-center gap-3 p-3 bg-gray-50 rounded-lg hover:bg-red-50 transition-colors">
                     <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
                       {service.icon}
                     </div>
