@@ -6,18 +6,23 @@ import EmploymentAboutus from "../Pages/EmoploymentPages/EmploymentAboutus";
 import EmploymentContactUs from "../Pages/EmoploymentPages/EmploymentContactUs";
 import EmploymentServices from "../Pages/EmoploymentPages/EmploymentServices";
 import EmploymentSuccessStories from "../Pages/EmoploymentPages/EmploymentSuccessStories";
+import ErrorElement from "../Components/Error/ErrorElement";
+import UnderConstruction from "../Components/Error/UnderConstruction";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorElement />,
   },
   {
     path: "/education",
-    element: <EmploymentLayout />,
+    element: <UnderConstruction title="Education section is coming soon!" />,
+    errorElement: <ErrorElement />,
   },
   {
     path: "/employment",
     element: <EmploymentLayout />,
+    errorElement: <ErrorElement />,
     children: [
       {
         path: "/employment/home",
