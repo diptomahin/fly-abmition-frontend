@@ -52,7 +52,7 @@ const App = () => {
             <PinterestIcon />
           </div>
           {/* Button */}
-          <Link to={'/education'}><button className="bg-inherit bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-white border-opacity-30 hover:bg-white hover:text-red-700">
+          <Link to={'/education/home'}><button className="bg-inherit bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-white border-opacity-30 hover:bg-white hover:text-red-700">
             Visit Now
           </button></Link>
         </div>

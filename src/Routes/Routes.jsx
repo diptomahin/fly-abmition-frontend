@@ -8,6 +8,11 @@ import EmploymentServices from "../Pages/EmoploymentPages/EmploymentServices";
 import EmploymentSuccessStories from "../Pages/EmoploymentPages/EmploymentSuccessStories";
 import ErrorElement from "../Components/Error/ErrorElement";
 import UnderConstruction from "../Components/Error/UnderConstruction";
+import EducationLayout from "../Layouts/EducationLayout";
+import EducationAbout from "../Pages/EducationPages/EducationAbout";
+import EducationHome from "../Pages/EducationPages/EducationHome";
+import EducationalServices from "../Pages/EducationPages/EducationServices";
+import EducationContact from "../Pages/EducationPages/EducationContact";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,8 +21,26 @@ const router = createBrowserRouter([
   },
   {
     path: "/education",
-    element: <UnderConstruction title="Education section is coming soon!" />,
-    errorElement: <ErrorElement />,
+    element: <EducationLayout></EducationLayout>,
+    errorElement:<ErrorElement/>,
+    children: [
+      {
+        path: "/education/home",
+        element: <EducationHome />,
+      },
+      {
+        path: "/education/about",
+        element: <EducationAbout />,
+      },
+      {
+        path: "/education/services",
+        element: <EducationalServices/>,
+      },
+      {
+        path: "/education/contact",
+        element: <EducationContact />,
+      },
+    ],
   },
   {
     path: "/employment",
