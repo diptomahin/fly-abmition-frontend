@@ -27,7 +27,7 @@ const EmploymentNavbar = () => {
           {/* Logo */}
           <Link to={"/"}>
             <div className="text-3xl font-bold flex items-center">
-              <img className="w-44" src="/public/logo.png" alt="Fly Ambition Logo" />
+              <img className="w-44" src="https://i.ibb.co.com/gFFK208r/logo.png" alt="Fly Ambition Logo" />
             </div>
           </Link>
 

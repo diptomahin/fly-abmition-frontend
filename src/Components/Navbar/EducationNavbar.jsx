@@ -163,7 +163,7 @@ const EducationNavbar = () => {
             <div className="flex items-center space-x-8">
               <Link to="/" className="flex items-center space-x-3">
                 <div className="flex items-center space-x-1">
-                 <img className="w-44" src="/public/logo.png" alt="Fly Ambition Logo" />
+                 <img className="w-44" src="https://i.ibb.co.com/gFFK208r/logo.png" alt="Fly Ambition Logo" />
                 </div>
                 <div className="text-gray-600 text-sm">
                   <div className="font-semibold">Education Consultant</div>

@@ -50,7 +50,7 @@ const App = () => {
        {/* === Centered Logo Over Both Sections === */}
       <div className="inset-x-0 absolute flex justify-center top-50 md:top-70 lg:top-50 z-20 pointer-events-none">
         <div className="text-white font-bold">
-          <img className="w-sm md:w-lg" src="/public/logo-2.png" alt="Fly Ambition Logo" />
+          <img className="w-sm md:w-lg" src="https://i.ibb.co/5X9d7Y1m/logo-2.png" alt="Fly Ambition Logo" />
         </div>
       </div>
       {/* Employment Section */}
