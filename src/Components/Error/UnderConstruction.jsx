@@ -15,7 +15,7 @@ const UnderConstruction = ({ title = "This page is under construction." }) => {
       <p className="text-lg text-gray-600">{title}</p>
       <Link
         to="/"
-        className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition"
+        className="bg-[#4f2e89] text-white px-6 py-2 rounded hover:bg-orange-700 transition"
       >
         Go Home
       </Link>

@@ -10,7 +10,7 @@ const HomeStatistics = () => {
   return (
     <div className="bg-gray-50 py-16">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-red-600 to-red-700 text-white">
+      <div className="bg-gradient-to-br from-[#4f2e89] to-orange-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -38,7 +38,7 @@ const HomeStatistics = () => {
                 className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">
-                  <IconComponent className="w-6 h-6 text-red-600" />
+                  <IconComponent className="w-6 h-6 text-[#4f2e89]" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {stat.number}

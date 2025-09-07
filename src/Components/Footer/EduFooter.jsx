@@ -21,7 +21,7 @@ const EduFooter = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-red-600 text-white px-3 py-1 rounded font-bold text-lg">
+              <div className="bg-[#4f2e89] text-white px-3 py-1 rounded font-bold text-lg">
                 FLY
               </div>
               <span className="font-semibold text-white text-lg">
@@ -42,7 +42,7 @@ const EduFooter = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-3 rounded-lg hover:bg-red-600 transition-colors"
+                className="bg-gray-800 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -50,7 +50,7 @@ const EduFooter = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-3 rounded-lg hover:bg-red-600 transition-colors"
+                className="bg-gray-800 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -58,7 +58,7 @@ const EduFooter = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 p-3 rounded-lg hover:bg-red-600 transition-colors"
+                className="bg-gray-800 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors"
               >
                 <Youtube className="w-5 h-5" />
               </a>
@@ -83,7 +83,7 @@ const EduFooter = () => {
                     href="#"
                     className="hover:text-red-400 transition-colors flex items-center"
                   >
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-[#4f2e89] rounded-full mr-3"></span>
                     {link}
                   </a>
                 </li>
@@ -98,19 +98,19 @@ const EduFooter = () => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center hover:text-red-400 transition-colors cursor-pointer">
-                <GraduationCap className="w-4 h-4 mr-3 text-red-600" /> University Admissions
+                <GraduationCap className="w-4 h-4 mr-3 text-[#4f2e89]" /> University Admissions
               </li>
               <li className="flex items-center hover:text-red-400 transition-colors cursor-pointer">
-                <BookOpen className="w-4 h-4 mr-3 text-red-600" /> Test Preparation (IELTS, TOEFL, SAT)
+                <BookOpen className="w-4 h-4 mr-3 text-[#4f2e89]" /> Test Preparation (IELTS, TOEFL, SAT)
               </li>
               <li className="flex items-center hover:text-red-400 transition-colors cursor-pointer">
-                <Globe className="w-4 h-4 mr-3 text-red-600" /> Study Abroad Programs
+                <Globe className="w-4 h-4 mr-3 text-[#4f2e89]" /> Study Abroad Programs
               </li>
               <li className="flex items-center hover:text-red-400 transition-colors cursor-pointer">
-                <Users className="w-4 h-4 mr-3 text-red-600" /> Career Counseling
+                <Users className="w-4 h-4 mr-3 text-[#4f2e89]" /> Career Counseling
               </li>
               <li className="flex items-center hover:text-red-400 transition-colors cursor-pointer">
-                <MessageSquare className="w-4 h-4 mr-3 text-red-600" /> Visa & Documentation Support
+                <MessageSquare className="w-4 h-4 mr-3 text-[#4f2e89]" /> Visa & Documentation Support
               </li>
             </ul>
           </div>
@@ -120,7 +120,7 @@ const EduFooter = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center">
-              <div className="bg-red-600 p-3 rounded-lg mr-4">
+              <div className="bg-[#4f2e89] p-3 rounded-lg mr-4">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
@@ -134,7 +134,7 @@ const EduFooter = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="bg-red-600 p-3 rounded-lg mr-4">
+              <div className="bg-[#4f2e89] p-3 rounded-lg mr-4">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
@@ -148,7 +148,7 @@ const EduFooter = () => {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="bg-red-600 p-3 rounded-lg mr-4">
+              <div className="bg-[#4f2e89] p-3 rounded-lg mr-4">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>

@@ -102,7 +102,7 @@ const EmploymentSuccessStories = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-red-600 to-red-700 text-white">
+      <div className="bg-gradient-to-br from-[#4f2e89] to-orange-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -131,7 +131,7 @@ const EmploymentSuccessStories = () => {
                   className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">
-                    <IconComponent className="w-6 h-6 text-red-600" />
+                    <IconComponent className="w-6 h-6 text-[#4f2e89]" />
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {stat.number}
@@ -149,7 +149,7 @@ const EmploymentSuccessStories = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-red-600">Success</span> Stories
+              Our <span className="text-[#4f2e89]">Success</span> Stories
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Meet the ambitious professionals who partnered with FlyAmbition to
@@ -166,7 +166,7 @@ const EmploymentSuccessStories = () => {
                 <div className="p-8 md:p-12">
                   <div className="flex flex-col md:flex-row md:items-start gap-8">
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                      <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-[#4f2e89] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                         {story.avatar}
                       </div>
                     </div>
@@ -176,7 +176,7 @@ const EmploymentSuccessStories = () => {
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">
                           {story.name}
                         </h3>
-                        <p className="text-red-600 font-semibold text-lg mb-1">
+                        <p className="text-[#4f2e89] font-semibold text-lg mb-1">
                           {story.role}
                         </p>
                         <p className="text-gray-600 flex items-center gap-2">
@@ -194,13 +194,13 @@ const EmploymentSuccessStories = () => {
 
                       <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border-l-4 border-red-500">
                         <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                          <Target className="w-5 h-5 text-red-600" />
+                          <Target className="w-5 h-5 text-[#4f2e89]" />
                           Results Achieved:
                         </h4>
                         <div className="grid md:grid-cols-2 gap-3">
                           {story.results.map((result, idx) => (
                             <div key={idx} className="flex items-start gap-3">
-                              <CheckCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                              <CheckCircle className="w-5 h-5 text-[#4f2e89] flex-shrink-0 mt-0.5" />
                               <span className="text-gray-700 font-medium">
                                 {result}
                               </span>
@@ -221,7 +221,7 @@ const EmploymentSuccessStories = () => {
       <ClientTestimonials></ClientTestimonials>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-br from-red-600 to-red-700 py-20">
+      <div className="bg-gradient-to-br from-[#4f2e89] to-orange-700 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Take Flight to Your Dreams?
@@ -231,11 +231,11 @@ const EmploymentSuccessStories = () => {
             journey
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
+            <button className="bg-white text-[#4f2e89] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
               <Briefcase className="w-5 h-5" />
               Find Jobs Now
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors flex items-center justify-center gap-2">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4f2e89] transition-colors flex items-center justify-center gap-2">
               <ArrowRight className="w-5 h-5" />
               Get Free Consultation
             </button>

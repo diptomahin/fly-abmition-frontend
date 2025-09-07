@@ -15,7 +15,7 @@ const ErrorElement = ({ title = "This Page is Under Construction!" }) => {
           <p className="text-lg text-gray-600">{title}</p>
           <Link
             to="/"
-            className="bg-red-600 my-3 text-white px-6 py-2 rounded hover:bg-red-700 transition"
+            className="bg-[#4f2e89] my-3 text-white px-6 py-2 rounded hover:bg-orange-700 transition"
           >
             Go Home
           </Link>

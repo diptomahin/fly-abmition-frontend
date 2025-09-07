@@ -27,10 +27,7 @@ const EmploymentNavbar = () => {
           {/* Logo */}
           <Link to={"/"}>
             <div className="text-3xl font-bold flex items-center">
-              <span className="text-red-600">FLY</span>
-              <span className="bg-red-600 text-white px-2 ml-2 rounded">
-                Ambìtion
-              </span>
+              <img className="w-44" src="/public/logo.png" alt="Fly Ambition Logo" />
             </div>
           </Link>
 
@@ -41,8 +38,8 @@ const EmploymentNavbar = () => {
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-gray-700 hover:text-red-600 font-medium ${
-                    isActive ? "text-red-600 border-b-2 border-red-600" : ""
+                  `text-gray-700 hover:text-[#4f2e89] font-medium ${
+                    isActive ? "text-[#4f2e89] border-b-2 border-[#4f2e89]" : ""
                   }`
                 }
               >
@@ -53,7 +50,7 @@ const EmploymentNavbar = () => {
 
           {/* CTA Button (Desktop) */}
           <div className="hidden md:flex">
-            <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+            <button className="bg-[#4f2e89] text-white px-4 py-2 rounded hover:bg-[#f26b24] transition">
               APPLY NOW
             </button>
           </div>
@@ -83,8 +80,8 @@ const EmploymentNavbar = () => {
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-gray-700 hover:text-red-600 font-medium ${
-                    isActive ? "text-red-600 border-b-2 border-red-600" : ""
+                  `text-gray-700 hover:text-[#4f2e89] font-medium ${
+                    isActive ? "text-[#4f2e89] border-b-2 border-[#4f2e89]" : ""
                   }`
                 }
               >
@@ -93,7 +90,7 @@ const EmploymentNavbar = () => {
             ))}
 
             {/* CTA Button (Mobile) */}
-            <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+            <button className="bg-[#4f2e89] text-white px-4 py-2 rounded hover:bg-orange-700 transition">
               APPLY NOW
             </button>
           </div>

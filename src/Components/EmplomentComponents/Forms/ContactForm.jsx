@@ -42,11 +42,11 @@ const ContactForm = () => {
 
   return (
     <div className="mb-7">
-      <section className="w-full md:w-11/12 mx-auto py-16 bg-white rounded-lg shadow-lg  border-y-red-600 border-y-4">
+      <section className="w-full md:w-11/12 mx-auto py-16 bg-white rounded-lg shadow-lg  border-y-[#4f2e89] border-y-4">
         <div className="w-full mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Contact us for <span className="text-red-600">Details</span>
+              Contact us for <span className="text-[#4f2e89]">Details</span>
             </h2>
             <p className="text-lg text-gray-600">
               Fill out the details below and our expert team will get back to
@@ -185,7 +185,7 @@ const ContactForm = () => {
               <div className="text-center pt-6">
                 <button
                   onClick={handleSubmit}
-                  className="bg-gradient-to-r from-red-600 to-red-700 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-red-800 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center mx-auto"
+                  className="bg-gradient-to-r from-[#4f2e89] to-orange-700 text-white px-12 py-4 rounded-lg font-semibold text-lg hover:from-orange-700 hover:to-purple-800 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center mx-auto"
                   disabled={isSubmitted}
                 >
                   {isSubmitted ? (

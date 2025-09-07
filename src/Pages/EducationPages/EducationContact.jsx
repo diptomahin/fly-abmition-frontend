@@ -5,7 +5,7 @@ const EducationContact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 pt-10">
       {/* Hero Section */}
-      <section className="relative h-80 bg-gradient-to-r from-red-600 via-red-700 to-red-800 flex items-center">
+      <section className="relative h-80 bg-gradient-to-r from-[#4f2e89] via-purple-800 to-orange-700 flex items-center">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl font-bold text-white mb-4">Contact Us</h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
@@ -30,7 +30,7 @@ const EducationContact = () => {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 flex items-center justify-center bg-red-100 text-red-600 rounded-xl">
+                <div className="w-12 h-12 flex items-center justify-center bg-red-100 text-[#4f2e89] rounded-xl">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -44,7 +44,7 @@ const EducationContact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 flex items-center justify-center bg-red-100 text-red-600 rounded-xl">
+                <div className="w-12 h-12 flex items-center justify-center bg-red-100 text-[#4f2e89] rounded-xl">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -54,7 +54,7 @@ const EducationContact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 flex items-center justify-center bg-red-100 text-red-600 rounded-xl">
+                <div className="w-12 h-12 flex items-center justify-center bg-red-100 text-[#4f2e89] rounded-xl">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -79,7 +79,7 @@ const EducationContact = () => {
                   <input
                     type="text"
                     placeholder="Enter your full name"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ const EducationContact = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
                 </div>
               </div>
@@ -102,7 +102,7 @@ const EducationContact = () => {
                   <input
                     type="tel"
                     placeholder="+880 1234 567 890"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
                 </div>
                 <div>
@@ -112,7 +112,7 @@ const EducationContact = () => {
                   <input
                     type="text"
                     placeholder="Enter subject"
-                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600"
+                    className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
                 </div>
               </div>
@@ -124,13 +124,13 @@ const EducationContact = () => {
                 <textarea
                   rows="5"
                   placeholder="Write your message here..."
-                  className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600"
+                  className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-[#4f2e89] text-white py-3 rounded-xl font-semibold hover:bg-orange-700 transition-colors flex items-center justify-center gap-2"
               >
                 <Send size={20} />
                 Send Message

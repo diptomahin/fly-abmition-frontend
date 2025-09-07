@@ -6,7 +6,7 @@ const EducationAbout = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 pt-10">
 
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-red-600 via-red-700 to-red-800 overflow-hidden">
+      <section className="relative h-96 bg-gradient-to-r from-[#4f2e89] via-purple-500 to-orange-800 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent transform -skew-y-3 animate-pulse"></div>
         </div>
@@ -32,14 +32,14 @@ const EducationAbout = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">Mission</span>
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">Mission</span>
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 To empower students with the knowledge, guidance, and resources they need to pursue education abroad, opening doors to global opportunities and professional growth.
               </p>
 
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">Vision</span>
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">Vision</span>
               </h2>
               <p className="text-gray-600 leading-relaxed">
                 To be the most trusted educational consultancy recognized for excellence in student placement, guidance, and support worldwide.
@@ -48,7 +48,7 @@ const EducationAbout = () => {
 
             <div className="grid grid-cols-2 gap-6">
               {[
-                { icon: <Users className="text-red-600" size={48} />, title: "Experienced Counselors", desc: "10+ years guiding students globally" },
+                { icon: <Users className="text-[#4f2e89]" size={48} />, title: "Experienced Counselors", desc: "10+ years guiding students globally" },
                 { icon: <Globe className="text-teal-600" size={48} />, title: "Global Network", desc: "Partnerships with 50+ universities worldwide" },
                 { icon: <Shield className="text-purple-600" size={48} />, title: "Trusted & Certified", desc: "Licensed consultancy with legal compliance" },
                 { icon: <Award className="text-yellow-600" size={48} />, title: "High Success Rate", desc: "95%+ students successfully placed" },
@@ -72,7 +72,7 @@ const EducationAbout = () => {
       <section className="py-20 bg-gradient-to-br from-red-50 to-gray-50">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">Story</span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">Story</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
             Founded with a vision to make global education accessible to students, FlyAmbition has helped thousands of learners secure admissions in top universities worldwide. 
@@ -82,7 +82,7 @@ const EducationAbout = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-red-600 to-red-700">
+      <section className="py-16 bg-gradient-to-r from-[#4f2e89] to-orange-700">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Start Your Education Journey?
@@ -92,11 +92,11 @@ const EducationAbout = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 justify-center">
+            <button className="bg-white text-[#4f2e89] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 justify-center">
               <Phone size={20} />
               Contact Us Now
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors flex items-center gap-2 justify-center">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#4f2e89] transition-colors flex items-center gap-2 justify-center">
               <Mail size={20} />
               Get Free Consultation
             </button>

@@ -91,7 +91,7 @@ const ClientTestimonials = () => {
                           </p>
                           
                           <div className="flex items-center gap-4">
-                            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center text-white text-xl font-bold">
+                            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-[#4f2e89] rounded-full flex items-center justify-center text-white text-xl font-bold">
                               {testimonial.avatar}
                             </div>
                             <div>
@@ -118,7 +118,7 @@ const ClientTestimonials = () => {
                                 </div>
                                 
                                 {/* Photo area */}
-                                <div className="mx-auto w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold mb-4">
+                                <div className="mx-auto w-20 h-20 bg-gradient-to-br from-red-500 to-[#4f2e89] rounded-lg flex items-center justify-center text-white text-2xl font-bold mb-4">
                                   {testimonial.avatar}
                                 </div>
                                 

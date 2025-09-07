@@ -41,8 +41,8 @@ const EducationNavbar = () => {
     path,
     baseClasses = "px-4 py-2 rounded font-semibold transition-colors"
   ) => {
-    const activeClasses = "bg-red-700 text-white";
-    const inactiveClasses = "text-white hover:bg-red-600";
+    const activeClasses = "bg-orange-700 text-white";
+    const inactiveClasses = "text-white hover:bg-[#4f2e89]";
 
     return `${baseClasses} ${isActive(path) ? activeClasses : inactiveClasses}`;
   };
@@ -52,8 +52,8 @@ const EducationNavbar = () => {
     path,
     baseClasses = "block py-3 font-semibold border-b border-gray-200 transition-colors"
   ) => {
-    const activeClasses = "text-red-600 bg-red-50 border-red-200";
-    const inactiveClasses = "text-gray-700 hover:text-red-600";
+    const activeClasses = "text-[#f26b24] bg-[#4f2e89] border-red-20 p-3";
+    const inactiveClasses = "text-gray-700 hover:text-[#4f2e89]";
 
     return `${baseClasses} ${isActive(path) ? activeClasses : inactiveClasses}`;
   };
@@ -62,7 +62,7 @@ const EducationNavbar = () => {
     {
       name: "Study in Malaysia",
       flag: "🇲🇾",
-      color: "bg-red-600",
+      color: "bg-[#4f2e89]",
       path: "/education/study/malaysia",
     },
     {
@@ -98,7 +98,7 @@ const EducationNavbar = () => {
     {
       name: "Study in Australia",
       flag: "🇦🇺",
-      color: "bg-red-600",
+      color: "bg-[#4f2e89]",
       path: "/education/study/australia",
     },
   ];
@@ -132,20 +132,20 @@ const EducationNavbar = () => {
             <div className="flex items-center space-x-3">
               <Link
                 to="/events"
-                className="bg-red-500 hover:bg-red-600 px-4 py-1.5 rounded text-white font-semibold transition-colors flex items-center gap-2"
+                className="bg-purple-500 hover:bg-[#4f2e89] px-4 py-1.5 rounded text-white font-semibold transition-colors flex items-center gap-2"
               >
                 <Calendar className="w-4 h-4" />
                 UPCOMING EVENTS
               </Link>
               <Link
                 to="/apply"
-                className="bg-red-500 hover:bg-red-600 px-4 py-1.5 rounded text-white font-semibold transition-colors"
+                className="bg-purple-500 hover:bg-[#4f2e89] px-4 py-1.5 rounded text-white font-semibold transition-colors"
               >
                 APPLY NOW
               </Link>
               <Link
                 to="/alumni-registration"
-                className="bg-red-500 hover:bg-red-600 px-4 py-1.5 rounded text-white font-semibold transition-colors flex items-center gap-2"
+                className="bg-purple-500 hover:bg-[#4f2e89] px-4 py-1.5 rounded text-white font-semibold transition-colors flex items-center gap-2"
               >
                 <UserPlus className="w-4 h-4" />
                 ALUMNI REGISTRATION
@@ -163,12 +163,7 @@ const EducationNavbar = () => {
             <div className="flex items-center space-x-8">
               <Link to="/" className="flex items-center space-x-3">
                 <div className="flex items-center space-x-1">
-                  <span className="bg-red-600 text-white px-3 py-1.5 rounded text-sm font-bold">
-                    FLY
-                  </span>
-                  <span className="bg-red-600 text-white px-3 py-1.5 rounded text-sm font-bold">
-                    Ambition
-                  </span>
+                 <img className="w-44" src="/public/logo.png" alt="Fly Ambition Logo" />
                 </div>
                 <div className="text-gray-600 text-sm">
                   <div className="font-semibold">Education Consultant</div>
@@ -192,7 +187,7 @@ const EducationNavbar = () => {
                       destination.color
                     } rounded-lg flex items-center justify-center text-white text-2xl shadow-md group-hover:shadow-lg transition-all ${
                       isActive(destination.path)
-                        ? "ring-2 ring-red-600 ring-offset-2"
+                        ? "ring-2 ring-[#4f2e89] ring-offset-2"
                         : ""
                     }`}
                   >
@@ -201,8 +196,8 @@ const EducationNavbar = () => {
                   <span
                     className={`text-xs mt-1 font-semibold transition-colors ${
                       isActive(destination.path)
-                        ? "text-red-600"
-                        : "text-gray-700 group-hover:text-red-600"
+                        ? "text-[#4f2e89]"
+                        : "text-gray-700 group-hover:text-[#4f2e89]"
                     }`}
                   >
                     {destination.name.split(" ")[2]}
@@ -215,7 +210,7 @@ const EducationNavbar = () => {
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
-                className="text-gray-700 hover:text-red-600 p-2"
+                className="text-gray-700 hover:text-[#4f2e89] p-2"
               >
                 {isMobileMenuOpen ? (
                   <X className="w-6 h-6" />
@@ -228,7 +223,7 @@ const EducationNavbar = () => {
         </div>
 
         {/* Main Menu Bar */}
-        <div className="bg-red-600">
+        <div className="bg-[#4f2e89]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="hidden md:flex items-center justify-between h-14">
               <div className="flex items-center mx-auto space-x-8">
@@ -251,8 +246,8 @@ const EducationNavbar = () => {
                     onClick={() => handleDropdownToggle("destinations")}
                     className={`px-4 py-2 rounded font-semibold transition-colors flex items-center gap-2 ${
                       isSubrouteActive("/study")
-                        ? "bg-red-600 text-white"
-                        : "text-white hover:bg-red-600"
+                        ? "bg-[#4f2e89] text-white"
+                        : "text-white hover:bg-[#4f2e89]"
                     }`}
                   >
                     <Globe className="w-4 h-4" />
@@ -286,8 +281,8 @@ const EducationNavbar = () => {
                             <span
                               className={`font-medium ${
                                 isActive(destination.path)
-                                  ? "text-red-600"
-                                  : "text-gray-700 group-hover:text-red-600"
+                                  ? "text-[#4f2e89]"
+                                  : "text-gray-700 group-hover:text-[#4f2e89]"
                               }`}
                             >
                               {destination.name}
@@ -348,8 +343,8 @@ const EducationNavbar = () => {
                   onClick={() => handleDropdownToggle("mobile-destinations")}
                   className={`w-full text-left py-3 font-semibold flex items-center justify-between transition-colors ${
                     isSubrouteActive("/study")
-                      ? "text-red-600"
-                      : "text-gray-700 hover:text-red-600"
+                      ? "text-[#4f2e89]"
+                      : "text-gray-700 hover:text-[#4f2e89]"
                   }`}
                 >
                   <span className="flex items-center gap-2">
@@ -373,8 +368,8 @@ const EducationNavbar = () => {
                         to={destination.path}
                         className={`flex items-center gap-3 py-2 transition-colors ${
                           isActive(destination.path)
-                            ? "text-red-600 font-semibold"
-                            : "text-gray-600 hover:text-red-600"
+                            ? "text-[#4f2e89] font-semibold"
+                            : "text-gray-600 hover:text-[#4f2e89]"
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -425,7 +420,7 @@ const EducationNavbar = () => {
                           destination.color
                         } rounded-lg flex items-center justify-center text-white text-2xl shadow-md ${
                           isActive(destination.path)
-                            ? "ring-2 ring-red-600 ring-offset-2"
+                            ? "ring-2 ring-[#4f2e89] ring-offset-2"
                             : ""
                         }`}
                       >
@@ -434,7 +429,7 @@ const EducationNavbar = () => {
                       <span
                         className={`text-xs mt-1 font-semibold text-center ${
                           isActive(destination.path)
-                            ? "text-red-600"
+                            ? "text-[#4f2e89]"
                             : "text-gray-700"
                         }`}
                       >

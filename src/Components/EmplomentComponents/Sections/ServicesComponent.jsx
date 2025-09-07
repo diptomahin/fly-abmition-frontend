@@ -20,7 +20,7 @@ const ServicesComponent = () => {
 
   const employerServices = [
     {
-      icon: <Users className="text-red-600" size={48} />,
+      icon: <Users className="text-[#4f2e89]" size={48} />,
       title: "Worker Sourcing",
       description:
         "Comprehensive recruitment of skilled and semi-skilled workers for international markets",
@@ -126,7 +126,7 @@ const ServicesComponent = () => {
 
   const workerServices = [
     {
-      icon: <Briefcase className="text-red-600" size={48} />,
+      icon: <Briefcase className="text-[#4f2e89]" size={48} />,
       title: "Job Placement",
       description:
         "International job opportunities across multiple industries and countries",
@@ -237,11 +237,11 @@ const ServicesComponent = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               OUR{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">
                 SERVICES
               </span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full mx-auto"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#4f2e89] to-orange-700 rounded-full mx-auto"></div>
             <p className="text-gray-600 mt-6 max-w-3xl mx-auto text-lg">
               Comprehensive solutions tailored for both employers seeking
               skilled workforce and workers pursuing international career
@@ -256,8 +256,8 @@ const ServicesComponent = () => {
                 onClick={() => setActiveTab("employer")}
                 className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
                   activeTab === "employer"
-                    ? "bg-red-600 text-white shadow-lg"
-                    : "text-gray-600 hover:text-red-600"
+                    ? "bg-[#4f2e89] text-white shadow-lg"
+                    : "text-gray-600 hover:text-[#4f2e89]"
                 }`}
               >
                 EMPLOYER
@@ -266,8 +266,8 @@ const ServicesComponent = () => {
                 onClick={() => setActiveTab("worker")}
                 className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
                   activeTab === "worker"
-                    ? "bg-red-600 text-white shadow-lg"
-                    : "text-gray-600 hover:text-red-600"
+                    ? "bg-[#4f2e89] text-white shadow-lg"
+                    : "text-gray-600 hover:text-[#4f2e89]"
                 }`}
               >
                 WORKER
@@ -289,7 +289,7 @@ const ServicesComponent = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-gray-900 mb-3 text-center group-hover:text-red-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 text-center group-hover:text-[#4f2e89] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed text-center mb-4">
@@ -311,7 +311,7 @@ const ServicesComponent = () => {
 
                 {/* Hover Arrow */}
                 <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity text-center">
-                  <ArrowRight className="text-red-600 mx-auto" size={20} />
+                  <ArrowRight className="text-[#4f2e89] mx-auto" size={20} />
                 </div>
               </div>
             ))}
@@ -353,7 +353,7 @@ const ServicesComponent = () => {
                 ))}
               </div>
               
-              <button className="w-full bg-red-600 text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors">
+              <button className="w-full bg-[#4f2e89] text-white py-3 rounded-xl font-semibold hover:bg-orange-700 transition-colors">
                 Get Started
               </button>
             </div>

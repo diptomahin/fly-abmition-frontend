@@ -16,17 +16,7 @@ const App = () => {
   );
 
   return (
-    <div className="relative flex  min-h-screen ">
-      {/* === Centered Logo Over Both Sections === */}
-      <div className="absolute inset-x-0 top-10 flex justify-center z-20">
-        <div className="text-white text-3xl font-bold">
-          <span className="text-white">FLY</span>
-          <span className="bg-white text-red-600 px-2 ml-2 rounded">
-            Ambìtion
-          </span>
-        </div>
-      </div>
-
+    <div className="relative flex flex-col min-h-screen">
       {/* Education Section */}
       <div className="relative flex-1 overflow-hidden">
         <video
@@ -39,25 +29,30 @@ const App = () => {
           <source src="/videos/banner_2.mp4" type="video/mp4" />
         </video>
         {/* Red Overlay */}
-        <div className="absolute inset-0 bg-red-600 bg-opacity-80 group-hover:bg-red-800 group-hover:opacity-90 transition-all duration-500 opacity-60"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white space-y-6">
-          <h1 className="text-6xl font-bold">Education</h1>
+        <div className="absolute inset-0 bg-[#f26b24] bg-opacity-80 group-hover:bg-purple-800 group-hover:opacity-90 transition-all duration-500 opacity-60"></div>
+        <div className="p-2 relative z-10 flex flex-col items-start justify-center h-full text-white space-y-6">
+          <h1 className=" text-3xl md:text-6xl font-bold">Education</h1>
           {/* Social Icons */}
           <div className="flex space-x-6">
-            <Facebook className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-            <Instagram className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
+            <Facebook className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+            <Instagram className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
             <TikTokIcon />
-            <Twitter className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-            <Linkedin className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
+            <Twitter className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+            <Linkedin className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
             <PinterestIcon />
           </div>
           {/* Button */}
-          <Link to={'/education/home'}><button className="bg-inherit bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-white border-opacity-30 hover:bg-white hover:text-red-700">
+          <Link to={'/education/home'}><button className="bg-inherit bg-opacity-20 hover:bg-opacity-30 text-white p-3 md:px-8 md:py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-white border-opacity-30 hover:bg-white hover:text-[#4f2e89]">
             Visit Now
           </button></Link>
         </div>
       </div>
-
+       {/* === Centered Logo Over Both Sections === */}
+      <div className="inset-x-0 absolute flex justify-center top-50 md:top-70 lg:top-50 z-20 pointer-events-none">
+        <div className="text-white font-bold">
+          <img className="w-sm md:w-lg" src="/public/logo.png" alt="Fly Ambition Logo" />
+        </div>
+      </div>
       {/* Employment Section */}
       <div className="relative flex-1 overflow-hidden">
         <video
@@ -70,23 +65,28 @@ const App = () => {
           <source src="/videos/banner_1.mp4" type="video/mp4" />
         </video>
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-60 group-hover:bg-red-800 group-hover:opacity-80 transition-all duration-500 opacity-60"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white space-y-6">
-          <h1 className="text-6xl font-bold">Employment</h1>
-          {/* Social Icons */}
-          <div className="flex space-x-6">
-            <Facebook className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-            <Instagram className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-            <Youtube className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-            <TikTokIcon />
-            <Twitter className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-            <Linkedin className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-            <PinterestIcon />
+        <div className="absolute inset-0 bg-[#4f2e89] bg-opacity-60 group-hover:bg-purple-800 group-hover:opacity-80 transition-all duration-500 opacity-60"></div>
+        <div className="relative z-10 flex items-center justify-end h-full text-white px-16">
+          <div className="flex flex-col items-end space-y-6">
+            <h1 className="text-3xl md:text-6xl font-bold">Employment</h1>
+            {/* Social Icons */}
+            <div className="flex space-x-6">
+              <Facebook className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+              <Instagram className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+              <Youtube className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+              <TikTokIcon />
+              <Twitter className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
+              <Linkedin className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
+              <PinterestIcon />
+            </div>
+            {/* Button */}
+            <button 
+              onClick={() => window.location.href = '/employment/home'}
+              className="bg-inherit bg-opacity-20 hover:bg-opacity-30 text-white p-2 md:px-8 md:py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-white border-opacity-30 hover:bg-[#f26b24] w-fit"
+            >
+              Visit Now
+            </button>
           </div>
-          {/* Button */}
-          <Link to={"/employment/home"}><button className="bg-inherit bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 border border-white border-opacity-30 hover:bg-red-700">
-            Visit Now
-          </button></Link>
         </div>
       </div>
     </div>

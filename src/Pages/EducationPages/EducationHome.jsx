@@ -7,7 +7,7 @@ const EducationHome = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
       {/* Hero Section */}
-      <section className="relative h-[90vh] bg-gradient-to-r from-red-600 via-red-700 to-red-800 flex items-center">
+      <section className="relative h-[90vh] bg-gradient-to-r from-[#f26b24] via-purple-500 to-purple-800 flex items-center">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Empowering Students for a Global Future
@@ -17,10 +17,10 @@ const EducationHome = () => {
             from admission and scholarships to visas and settlement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 justify-center">
+            <button className="bg-white text-[#4f2e89] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 justify-center">
               Get Started <ArrowRight size={20} />
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#4f2e89] transition-colors">
               Learn More
             </button>
           </div>
@@ -33,7 +33,7 @@ const EducationHome = () => {
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               About{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-700">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">
                 FlyAmbition
               </span>
             </h2>
@@ -56,7 +56,7 @@ const EducationHome = () => {
               ))}
             </ul>
           </div>
-          <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-3xl p-8 text-white shadow-lg">
+          <div className="bg-gradient-to-br from-[#4f2e89] to-orange-700 rounded-3xl p-8 text-white shadow-lg">
             <h3 className="text-2xl font-bold mb-6">Our Impact</h3>
             <div className="grid grid-cols-2 gap-6">
               {[
@@ -120,7 +120,7 @@ const EducationHome = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-red-600 to-red-700">
+      <section className="py-16 bg-gradient-to-r from-[#4f2e89] to-orange-700">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Begin Your Study Abroad Journey?
@@ -128,7 +128,7 @@ const EducationHome = () => {
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Let our experts guide you through admissions, scholarships, and visas.
           </p>
-          <button className="bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 mx-auto">
+          <button className="bg-white text-[#4f2e89] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 mx-auto">
             Contact Us <ArrowRight size={20} />
           </button>
         </div>

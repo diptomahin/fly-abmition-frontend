@@ -16,7 +16,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-red-600 text-white px-3 py-1 rounded font-bold text-lg">
+                <div className="bg-[#4f2e89] text-white px-3 py-1 rounded font-bold text-lg">
                   FLY
                 </div>
                 <span className="font-semibold text-white text-lg">Ambition</span>
@@ -25,16 +25,16 @@ const Footer = () => {
                 FlyAmbition is a leading manpower supply and foreign employment consulting company registered in Bangladesh. We specialize in connecting skilled professionals and workers with premier international opportunities across the Middle East, Europe, North America, and Asia Pacific regions.
               </p>
               <div className="flex space-x-4">
-                <div className="bg-gray-700 p-3 rounded-lg hover:bg-red-600 transition-colors cursor-pointer">
+                <div className="bg-gray-700 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors cursor-pointer">
                   <Mail className="w-5 h-5" />
                 </div>
-                <div className="bg-gray-700 p-3 rounded-lg hover:bg-red-600 transition-colors cursor-pointer">
+                <div className="bg-gray-700 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors cursor-pointer">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div className="bg-gray-700 p-3 rounded-lg hover:bg-red-600 transition-colors cursor-pointer">
+                <div className="bg-gray-700 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors cursor-pointer">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <div className="bg-gray-700 p-3 rounded-lg hover:bg-red-600 transition-colors cursor-pointer">
+                <div className="bg-gray-700 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors cursor-pointer">
                   <Globe className="w-5 h-5" />
                 </div>
               </div>
@@ -46,31 +46,31 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-[#4f2e89] rounded-full mr-3"></span>
                     Home
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-[#4f2e89] rounded-full mr-3"></span>
                     About Us
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-[#4f2e89] rounded-full mr-3"></span>
                     Our Services
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-[#4f2e89] rounded-full mr-3"></span>
                     Success Stories
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <span className="w-2 h-2 bg-red-600 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-[#4f2e89] rounded-full mr-3"></span>
                     Contact Us
                   </a>
                 </li>
@@ -83,31 +83,31 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <Users className="w-4 h-4 mr-3 text-red-600" />
+                    <Users className="w-4 h-4 mr-3 text-[#4f2e89]" />
                     Worker Sourcing
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <Award className="w-4 h-4 mr-3 text-red-600" />
+                    <Award className="w-4 h-4 mr-3 text-[#4f2e89]" />
                     Skill Assessment
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <Globe className="w-4 h-4 mr-3 text-red-600" />
+                    <Globe className="w-4 h-4 mr-3 text-[#4f2e89]" />
                     Visa Processing
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <Briefcase className="w-4 h-4 mr-3 text-red-600" />
+                    <Briefcase className="w-4 h-4 mr-3 text-[#4f2e89]" />
                     Employment Consulting
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
-                    <MessageSquare className="w-4 h-4 mr-3 text-red-600" />
+                    <MessageSquare className="w-4 h-4 mr-3 text-[#4f2e89]" />
                     Career Guidance
                   </a>
                 </li>
@@ -119,7 +119,7 @@ const Footer = () => {
           <div className="border-t border-gray-700 pt-8 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center">
-                <div className="bg-red-600 p-3 rounded-lg mr-4">
+                <div className="bg-[#4f2e89] p-3 rounded-lg mr-4">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -128,7 +128,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="bg-red-600 p-3 rounded-lg mr-4">
+                <div className="bg-[#4f2e89] p-3 rounded-lg mr-4">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -137,7 +137,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="bg-red-600 p-3 rounded-lg mr-4">
+                <div className="bg-[#4f2e89] p-3 rounded-lg mr-4">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
