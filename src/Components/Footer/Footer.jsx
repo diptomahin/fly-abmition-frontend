@@ -16,10 +16,13 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-[#4f2e89] text-white px-3 py-1 rounded font-bold text-lg">
-                  FLY
-                </div>
-                <span className="font-semibold text-white text-lg">Ambition</span>
+                <div className="items-center space-x-2 mb-4">
+              <img
+                className="w-44 object-contain"
+                src="https://i.ibb.co.com/5X9d7Y1m/logo-2.png"
+                alt="Fly Ambition Logo"
+              />
+            </div>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 FlyAmbition is a leading manpower supply and foreign employment consulting company registered in Bangladesh. We specialize in connecting skilled professionals and workers with premier international opportunities across the Middle East, Europe, North America, and Asia Pacific regions.

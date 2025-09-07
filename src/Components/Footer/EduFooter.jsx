@@ -20,13 +20,12 @@ const EduFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-[#4f2e89] text-white px-3 py-1 rounded font-bold text-lg">
-                FLY
-              </div>
-              <span className="font-semibold text-white text-lg">
-                Ambition Edu
-              </span>
+            <div className="items-center space-x-2 mb-4">
+              <img
+                className="w-44 object-contain"
+                src="https://i.ibb.co.com/5X9d7Y1m/logo-2.png"
+                alt="Fly Ambition Logo"
+              />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               FlyAmbition Edu is a trusted educational consultancy guiding

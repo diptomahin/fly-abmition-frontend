@@ -75,8 +75,8 @@ const App = () => {
               <Instagram className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
               <Youtube className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
               <TikTokIcon />
-              <Twitter className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
-              <Linkedin className="w-8 h-8 hover:scale-110 transition-transform cursor-pointer" />
+              <Twitter className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+              <Linkedin className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
               <PinterestIcon />
             </div>
             {/* Button */}
