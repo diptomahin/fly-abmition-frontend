@@ -12,29 +12,7 @@ const EmploymentContactUs = () => {
 
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="bg-[#4f2e89] text-white px-3 py-1 rounded font-bold text-lg">
-              FLY
-            </div>
-            <span className="font-semibold text-gray-800">Ambition</span>
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-700 hover:text-[#4f2e89] font-medium">Home</a>
-            <a href="#" className="text-gray-700 hover:text-[#4f2e89] font-medium">About Us</a>
-            <a href="#" className="text-gray-700 hover:text-[#4f2e89] font-medium">Services</a>
-            <a href="#" className="text-gray-700 hover:text-[#4f2e89] font-medium">Success Stories</a>
-            <a href="#" className="text-[#4f2e89] font-medium">Contact Us</a>
-          </div>
-          <button className="bg-[#4f2e89] text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-            APPLY NOW
-          </button>
-        </div>
-      </nav>
-
+    <div className="min-h-screen bg-gray-50 pt-30">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#4f2e89] to-orange-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">

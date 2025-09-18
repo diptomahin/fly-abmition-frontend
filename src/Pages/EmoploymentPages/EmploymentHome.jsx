@@ -6,7 +6,7 @@ import ServicesComponent from "../../Components/EmplomentComponents/Sections/Ser
 
 const EmploymentHome = () => {
   return (
-    <div className="pt-10">
+    <div className="pt-30">
       <ShareTripBooking></ShareTripBooking>
       <ServicesComponent></ServicesComponent>
       <HomeStatistics></HomeStatistics>

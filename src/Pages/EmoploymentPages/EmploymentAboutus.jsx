@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import { 
   Globe, 
   Users, 
@@ -18,60 +18,12 @@ import {
   Shield,
   CheckCircle
 } from 'lucide-react';
+import { TeamMembers } from '../../Components/EmplomentComponents/Sections/TeamMembers';
 
 const EmploymentAboutus = () => {
-const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const teamMembers = [
-    {
-      name: "Ahmed Rahman",
-      position: "Managing Director",
-      avatar: "👨‍💼",
-      speciality: "International Relations"
-    },
-    {
-      name: "Sarah Khan",
-      position: "HR Director",
-      avatar: "👩‍💼",
-      speciality: "Talent Acquisition"
-    },
-    {
-      name: "Mohammad Ali",
-      position: "Operations Manager",
-      avatar: "👨‍💼",
-      speciality: "Process Management"
-    },
-    {
-      name: "Fatima Ahmed",
-      position: "Client Relations Head",
-      avatar: "👩‍💼",
-      speciality: "Customer Success"
-    },
-    {
-      name: "Rashid Hassan",
-      position: "Legal Advisor",
-      avatar: "👨‍💼",
-      speciality: "Visa & Documentation"
-    }
-  ];
 
-  const testimonials = [
-    {
-      text: "FlyAmbition transformed my career. Their professional guidance helped me secure a position in Dubai within 3 months. Exceptional service!",
-      author: "Rahman Sheikh",
-      position: "Construction Manager, UAE"
-    },
-    {
-      text: "Professional, reliable, and results-oriented. They handled everything from documentation to job placement seamlessly.",
-      author: "Nasir Ahmed",
-      position: "Software Engineer, Canada"
-    },
-    {
-      text: "The best manpower consultancy in Bangladesh. They truly understand the international job market and client needs.",
-      author: "Khalid Hassan",
-      position: "Project Manager, Qatar"
-    }
-  ];
+
 
   const services = [
     {
@@ -96,16 +48,9 @@ const [currentTestimonial, setCurrentTestimonial] = useState(0);
     }
   ];
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 pt-30">
       {/* Hero Section with Skyline */}
       <section className="relative h-96 bg-gradient-to-r from-[#4f2e89] via-[#f26b24] to-purple-800 overflow-hidden">
         {/* Animated Background Pattern */}
@@ -277,128 +222,7 @@ const [currentTestimonial, setCurrentTestimonial] = useState(0);
           </div>
         </div>
       </section>
-
-      {/* Our Team Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">Team</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#4f2e89] to-orange-700 rounded-full mx-auto"></div>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Meet our experienced professionals dedicated to making your international career dreams come true
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={index}
-                className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-red-200"
-              >
-                {/* Avatar */}
-                <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-[#4f2e89] rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl shadow-lg group-hover:shadow-xl transition-shadow">
-                  {member.avatar}
-                </div>
-                
-                {/* Info */}
-                <h4 className="font-bold text-gray-900 mb-1 group-hover:text-[#4f2e89] transition-colors">
-                  {member.name}
-                </h4>
-                <p className="text-sm text-gray-600 font-medium mb-2">
-                  {member.position}
-                </p>
-                <p className="text-xs text-[#4f2e89] font-medium">
-                  {member.speciality}
-                </p>
-                
-                {/* Hover effect */}
-                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-8 h-0.5 bg-gradient-to-r from-red-500 to-[#4f2e89] rounded-full mx-auto"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories/Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-orange-900 to-black relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-20 h-20 border border-white rounded-full"></div>
-          <div className="absolute top-40 right-20 w-16 h-16 border border-red-400 rounded-full"></div>
-          <div className="absolute bottom-20 left-1/4 w-12 h-12 border border-white rounded-full"></div>
-          <Plane className="absolute top-1/4 right-1/4 text-white/10 transform rotate-45" size={48} />
-          <Globe className="absolute bottom-1/4 left-1/6 text-red-400/10" size={40} />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-500">Stories</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-red-400 to-red-500 rounded-full mx-auto"></div>
-            <p className="text-gray-300 mt-4">Real experiences from professionals who flew to success with FlyAmbition</p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
-              <div className="text-center">
-                <div className="text-6xl text-red-400 mb-6">❝</div>
-                <p className="text-xl text-white leading-relaxed mb-8">
-                  {testimonials[currentTestimonial].text}
-                </p>
-                
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-[#4f2e89] rounded-full flex items-center justify-center">
-                    <CheckCircle className="text-white" size={20} />
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-white">
-                      {testimonials[currentTestimonial].author}
-                    </div>
-                    <div className="text-red-300 text-sm">
-                      {testimonials[currentTestimonial].position}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Navigation */}
-              <div className="flex justify-center items-center gap-4 mt-8">
-                <button 
-                  onClick={prevTestimonial}
-                  className="w-10 h-10 bg-white/20 hover:bg-red-500/30 rounded-full flex items-center justify-center transition-colors"
-                >
-                  <ChevronLeft className="text-white" size={20} />
-                </button>
-                
-                <div className="flex gap-2">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentTestimonial(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${
-                        index === currentTestimonial ? 'bg-red-400' : 'bg-white/30'
-                      }`}
-                    />
-                  ))}
-                </div>
-                
-                <button 
-                  onClick={nextTestimonial}
-                  className="w-10 h-10 bg-white/20 hover:bg-red-500/30 rounded-full flex items-center justify-center transition-colors"
-                >
-                  <ChevronRight className="text-white" size={20} />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <TeamMembers />
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-[#4f2e89] to-orange-700">
         <div className="container mx-auto px-6 text-center">

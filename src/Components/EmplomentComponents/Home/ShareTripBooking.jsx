@@ -33,8 +33,9 @@ export default function ShareTripBooking() {
     { id: "gift", label: "Gift Card", icon: Gift },
   ];
 
+  
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className=" relative overflow-hidden">
       <video
         className="absolute inset-0 w-full h-2/3 object-cover"
         autoPlay
@@ -44,12 +45,11 @@ export default function ShareTripBooking() {
       >
         <source src="/videos/banner_3.mp4" type="video/mp4" />
       </video>{" "}
-      F
-      <div className="relative z-10 container mx-auto px-6 py-5">
+      <div className="relative z-10 container mx-auto px-6 pt-30">
         {/* Header - Exact match to image */}
         <div className="mt-10 mb-6">
           <h1 className="text-5xl font-bold text-white  tracking-tight mb-2">
-            Welcome to <span className="font-bold">ShareTrip</span>!
+            Welcome to <span className="font-bold">FlyAmbition</span>!
           </h1>
           <p className="text-lg text-white/90">
             Find Flights, Hotels, Visa & Holidays
@@ -57,7 +57,7 @@ export default function ShareTripBooking() {
         </div>
 
         {/* Main Booking Card - Exact match */}
-        <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+        <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden border-2 border-purple-500">
           {/* Navigation Tabs - Exact styling */}
           <div className="flex border-b border-gray-200">
             {tabs.map((tab) => {

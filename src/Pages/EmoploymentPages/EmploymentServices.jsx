@@ -15,7 +15,7 @@ import {
 import ServicesComponent from "../../Components/EmplomentComponents/Sections/ServicesComponent";
 const EmploymentServices = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 pt-10">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 pt-30">
       {/* Hero Section */}
       <section className="relative h-96 bg-gradient-to-r from-[#4f2e89] via-orange-700 to-purple-800 overflow-hidden">
         {/* Background Image Effect */}

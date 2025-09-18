@@ -28,7 +28,7 @@ const EduFooter = () => {
               />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              FlyAmbition Edu is a trusted educational consultancy guiding
+              FlyAmbition is a trusted educational consultancy guiding
               students to achieve their dreams of studying abroad. We partner
               with top universities worldwide, providing end-to-end support from
               university selection and admission to visa processing and career

@@ -46,19 +46,6 @@ const ServicesComponent = () => {
       category: "assessment",
     },
     {
-      icon: <Plane className="text-blue-600" size={48} />,
-      title: "Air Ticket",
-      description:
-        "Flight booking and travel arrangement services for deployed workers",
-      features: [
-        "Best fare rates",
-        "Group bookings",
-        "Flexible scheduling",
-        "Travel insurance",
-      ],
-      category: "travel",
-    },
-    {
       icon: <FileText className="text-green-600" size={48} />,
       title: "Visa Processing",
       description:
@@ -70,6 +57,19 @@ const ServicesComponent = () => {
         "Legal compliance",
       ],
       category: "documentation",
+    },
+        {
+      icon: <Plane className="text-blue-600" size={48} />,
+      title: "Air Ticket",
+      description:
+        "Flight booking and travel arrangement services for deployed workers",
+      features: [
+        "Best fare rates",
+        "Group bookings",
+        "Flexible scheduling",
+        "Travel insurance",
+      ],
+      category: "travel",
     },
     {
       icon: <Shield className="text-purple-600" size={48} />,
@@ -164,6 +164,19 @@ const ServicesComponent = () => {
       ],
       category: "preparation",
     },
+        {
+      icon: <Plane className="text-blue-600" size={48} />,
+      title: "Air Ticket",
+      description:
+        "Flight booking and travel arrangement services for deployed workers",
+      features: [
+        "Best fare rates",
+        "Group bookings",
+        "Flexible scheduling",
+        "Travel insurance",
+      ],
+      category: "travel",
+    },
     {
       icon: <Heart className="text-purple-600" size={48} />,
       title: "Medical & Legal Assistance",
@@ -212,19 +225,6 @@ const ServicesComponent = () => {
         "Communication skills",
       ],
       category: "training",
-    },
-    {
-      icon: <Phone className="text-green-500" size={48} />,
-      title: "Post-Arrival Support",
-      description:
-        "Ongoing support and assistance after reaching destination country",
-      features: [
-        "Settlement support",
-        "Issue resolution",
-        "Career guidance",
-        "Emergency assistance",
-      ],
-      category: "support",
     },
   ];
 
@@ -276,7 +276,7 @@ const ServicesComponent = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div  data-aos="zoom-in" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {currentServices.map((service, index) => (
               <div
                 key={index}
