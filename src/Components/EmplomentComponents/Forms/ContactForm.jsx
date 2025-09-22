@@ -42,7 +42,7 @@ const ContactForm = () => {
 
   return (
     <div className="mb-7">
-      <section className="w-full md:w-11/12 mx-auto py-16 bg-white rounded-lg shadow-lg  border-y-[#4f2e89] border-y-4">
+      <section data-aos="flip-up" className="w-full md:w-11/12 mx-auto py-16 bg-white rounded-lg shadow-lg  border-[#4f2e89] border-y-4 border-x-2">
         <div className="w-full mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">

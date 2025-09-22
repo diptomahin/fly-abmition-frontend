@@ -50,9 +50,9 @@ const ClientTestimonials = () => {
 
 
   return (
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 py-20 overflow-hidden">
+          <div data-aos="fade-down" className="bg-gradient-to-br from-gray-800 to-gray-900 py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-white mb-16">
+          <div className="text-center text-white mb-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Client <span className="text-red-400">Testimonials</span>
             </h2>

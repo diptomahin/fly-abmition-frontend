@@ -9,8 +9,8 @@ const EmploymentHome = () => {
     <div className="pt-30">
       <ShareTripBooking></ShareTripBooking>
       <ServicesComponent></ServicesComponent>
-      <HomeStatistics></HomeStatistics>
-      <ClientTestimonials></ClientTestimonials>
+      <HomeStatistics ></HomeStatistics>
+      <ClientTestimonials ></ClientTestimonials>
       <ContactForm></ContactForm>
     </div>
   );

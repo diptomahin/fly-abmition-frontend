@@ -84,9 +84,11 @@ const EmploymentNavbar = () => {
           </div>
           {/* CTA Button (Desktop) */}
           <div className="hidden md:flex mt-10">
+            <Link to={"/employment/applynow"}>
             <button className="bg-[#4f2e89] text-white px-4 py-2 rounded hover:bg-[#f26b24] transition">
               APPLY NOW
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

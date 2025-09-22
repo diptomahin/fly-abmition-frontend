@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Facebook, Instagram,  Mail  } from "lucide-react";
+import { Facebook, Instagram,  MapPin} from "lucide-react";
 import { Link } from "react-router";
 
 const imagesEmployment = [
@@ -71,8 +71,8 @@ const App = () => {
             <a href="https://www.instagram.com/flyambitionbd?igsh=NWp3NWIyODRvN2Fi" target="_blank" rel="noopener noreferrer">
               <Instagram className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
             </a>
-            <a href="mailto:flyambitionbd@gmail.com" target="_blank" rel="noopener noreferrer">
-              <Mail className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+            <a href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw" target="_blank" rel="noopener noreferrer">
+              <MapPin className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
             </a>
           </div>
             {/* Button */}
@@ -109,8 +109,8 @@ const App = () => {
             <a href="https://www.instagram.com/flyambitionbd?igsh=NWp3NWIyODRvN2Fi" target="_blank" rel="noopener noreferrer">
               <Instagram className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
             </a>
-            <a href="mailto:flyambitionbd@gmail.com" target="_blank" rel="noopener noreferrer">
-              <Mail className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
+            <a href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw" target="_blank" rel="noopener noreferrer">
+              <MapPin className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform cursor-pointer" />
             </a>
           </div>
           {/* Button */}

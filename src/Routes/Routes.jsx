@@ -13,6 +13,7 @@ import EducationAbout from "../Pages/EducationPages/EducationAbout";
 import EducationHome from "../Pages/EducationPages/EducationHome";
 import EducationalServices from "../Pages/EducationPages/EducationServices";
 import EducationContact from "../Pages/EducationPages/EducationContact";
+import ApplyNow from "../Pages/EmoploymentPages/ApplyNow";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/employment/success",
         element: <EmploymentSuccessStories />,
+      },
+      {
+        path: "/employment/applynow",
+        element: <ApplyNow />,
       },
     ],
   },

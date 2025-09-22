@@ -1,26 +1,18 @@
 import React from "react";
 import {
-  Users,
-  TrendingUp,
-  Globe,
-  Quote,
-  ArrowRight,
-  CheckCircle,
-  Plane,
-  Target,
   Building,
+  Quote,
+  Target,
+  CheckCircle,
   Briefcase,
+  ArrowRight,
 } from "lucide-react";
 import ClientTestimonials from "../../Components/EmplomentComponents/Sections/ClientTestimonials";
+import Statistics from "../../Components/EmplomentComponents/Sections/statistics";
+import Hero from "../../Components/EmplomentComponents/Sections/Hero";
+import Cta from "../../Components/EmplomentComponents/Sections/Cta";
 
 const EmploymentSuccessStories = () => {
-  const stats = [
-    { number: "5000+", label: "Workers Placed", icon: Users },
-    { number: "200+", label: "Partner Companies", icon: Building },
-    { number: "25+", label: "Countries", icon: Globe },
-    { number: "98%", label: "Success Rate", icon: TrendingUp },
-  ];
-
   const successStories = [
     {
       name: "Sarah Martinez",
@@ -101,48 +93,11 @@ const EmploymentSuccessStories = () => {
 
   return (
     <div className="min-h-screen bg-white pt-30">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-[#4f2e89] to-orange-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Success Stories
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
-              Real experiences from professionals who flew to success with
-              FlyAmbition
-            </p>
-            <div className="mt-8 flex justify-center">
-              <Plane className="w-16 h-16 opacity-20" />
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Modern Testimonials Slider */}
+      <ClientTestimonials />
 
       {/* Stats Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">
-                    <IconComponent className="w-6 h-6 text-[#4f2e89]" />
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
+      <Statistics />
 
       {/* Success Stories Section */}
       <div className="py-20 bg-white">
@@ -161,7 +116,7 @@ const EmploymentSuccessStories = () => {
             {successStories.map((story, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+                className="bg-white border-l-2 border-t-2 border-[#4f2e89] rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-transform duration-300 overflow-hidden"
               >
                 <div className="p-8 md:p-12">
                   <div className="flex flex-col md:flex-row md:items-start gap-8">
@@ -186,20 +141,23 @@ const EmploymentSuccessStories = () => {
                       </div>
 
                       <div className="mb-8">
-                        <Quote className="w-8 h-8 text-red-200 mb-4" />
+                        <Quote className="w-8 h-8 text-[#4f2e89] mb-4 opacity-40" />
                         <p className="text-gray-700 text-lg italic leading-relaxed">
                           "{story.story}"
                         </p>
                       </div>
 
-                      <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border-l-4 border-red-500">
+                      <div className="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border-l-4 border-[#4f2e89]">
                         <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                           <Target className="w-5 h-5 text-[#4f2e89]" />
                           Results Achieved:
                         </h4>
                         <div className="grid md:grid-cols-2 gap-3">
                           {story.results.map((result, idx) => (
-                            <div key={idx} className="flex items-start gap-3">
+                            <div
+                              key={idx}
+                              className="flex items-start gap-3 hover:translate-x-1 transition-transform"
+                            >
                               <CheckCircle className="w-5 h-5 text-[#4f2e89] flex-shrink-0 mt-0.5" />
                               <span className="text-gray-700 font-medium">
                                 {result}
@@ -217,31 +175,8 @@ const EmploymentSuccessStories = () => {
         </div>
       </div>
 
-      {/* Modern Testimonials Slider */}
-      <ClientTestimonials></ClientTestimonials>
-
       {/* CTA Section */}
-      <div className="bg-gradient-to-br from-[#4f2e89] to-orange-700 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Take Flight to Your Dreams?
-          </h2>
-          <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Let our expert team guide you through your international career
-            journey
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#4f2e89] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
-              <Briefcase className="w-5 h-5" />
-              Find Jobs Now
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#4f2e89] transition-colors flex items-center justify-center gap-2">
-              <ArrowRight className="w-5 h-5" />
-              Get Free Consultation
-            </button>
-          </div>
-        </div>
-      </div>
+     <Cta></Cta>
     </div>
   );
 };
