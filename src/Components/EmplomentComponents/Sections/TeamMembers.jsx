@@ -1,5 +1,4 @@
 import React from "react";
-
 export const TeamMembers = () => {
   const teamMembers = [
     {
@@ -39,7 +38,8 @@ export const TeamMembers = () => {
       {/* Our Team Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          {/* Section Header */}
+          <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Our{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">
@@ -53,11 +53,14 @@ export const TeamMembers = () => {
             </p>
           </div>
 
+          {/* Team Members */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
                 className="group bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border-2 border-red-200 hover:border-red-200"
+                data-aos="zoom-in"
+                data-aos-delay={index * 150}
               >
                 {/* Avatar */}
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-[#4f2e89] rounded-2xl mx-auto mb-4 flex items-center justify-center text-3xl shadow-lg group-hover:shadow-xl transition-shadow">
@@ -87,4 +90,5 @@ export const TeamMembers = () => {
     </div>
   );
 };
+
 export default TeamMembers;

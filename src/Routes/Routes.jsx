@@ -14,63 +14,42 @@ import EducationHome from "../Pages/EducationPages/EducationHome";
 import EducationalServices from "../Pages/EducationPages/EducationServices";
 import EducationContact from "../Pages/EducationPages/EducationContact";
 import ApplyNow from "../Pages/EmoploymentPages/ApplyNow";
+import EduApplyNow from "../Pages/EducationPages/EduApplyNow";
+import MainLayout from "../Layouts/MainLayout";
+
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App></App>,
-    errorElement: <ErrorElement />,
-  },
-  {
-    path: "/education",
-    element: <EducationLayout></EducationLayout>,
-    errorElement:<ErrorElement/>,
+    element: <MainLayout />, // Wrap all routes
     children: [
       {
-        path: "/education/home",
-        element: <EducationHome />,
+        path: "/",
+        element: <App />,
+        errorElement: <ErrorElement />,
       },
       {
-        path: "/education/about",
-        element: <EducationAbout />,
+        path: "/education",
+        element: <EducationLayout />,
+        errorElement: <ErrorElement />,
+        children: [
+          { path: "home", element: <EducationHome /> },
+          { path: "about", element: <EducationAbout /> },
+          { path: "services", element: <EducationalServices /> },
+          { path: "contact", element: <EducationContact /> },
+          { path: "applynow", element: <EduApplyNow /> },
+        ],
       },
       {
-        path: "/education/services",
-        element: <EducationalServices/>,
-      },
-      {
-        path: "/education/contact",
-        element: <EducationContact />,
-      },
-    ],
-  },
-  {
-    path: "/employment",
-    element: <EmploymentLayout />,
-    errorElement: <ErrorElement />,
-    children: [
-      {
-        path: "/employment/home",
-        element: <EmploymentHome />,
-      },
-      {
-        path: "/employment/about",
-        element: <EmploymentAboutus />,
-      },
-      {
-        path: "/employment/contact",
-        element: <EmploymentContactUs />,
-      },
-      {
-        path: "/employment/services",
-        element: <EmploymentServices />,
-      },
-      {
-        path: "/employment/success",
-        element: <EmploymentSuccessStories />,
-      },
-      {
-        path: "/employment/applynow",
-        element: <ApplyNow />,
+        path: "/employment",
+        element: <EmploymentLayout />,
+        errorElement: <ErrorElement />,
+        children: [
+          { path: "home", element: <EmploymentHome /> },
+          { path: "about", element: <EmploymentAboutus /> },
+          { path: "contact", element: <EmploymentContactUs /> },
+          { path: "services", element: <EmploymentServices /> },
+          { path: "success", element: <EmploymentSuccessStories /> },
+          { path: "applynow", element: <ApplyNow /> },
+        ],
       },
     ],
   },
