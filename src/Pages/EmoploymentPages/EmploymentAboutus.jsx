@@ -60,7 +60,7 @@ const EmploymentAboutus = () => {
         </div>
       </section> */}
       <Hero
-        imageUrl="https://i.ibb.co.com/LhvL0v3T/group-workers-organizing-protest.jpg"
+        imageUrl="/images/employment1.webp"
         title="Your Global Career Awaits"
         subtitle="Discover Who FlyAmbition Is"
       />

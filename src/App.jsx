@@ -3,15 +3,15 @@ import { Facebook, Instagram,  MapPin} from "lucide-react";
 import { Link } from "react-router";
 
 const imagesEmployment = [
-  "https://i.ibb.co.com/W42HnMg2/three-factory-workers-safety-hats-discussing-manufacture-plan.jpg",
-  "https://i.ibb.co.com/R4chh2Vr/construction-workers-sunset.jpg",
-  "https://i.ibb.co.com/LhvL0v3T/group-workers-organizing-protest.jpg",
+  "/images/employment1.webp",
+  "/images/employment2.webp",
+  "/images/employment3.webp",
 ];
 
 const imagesEducation = [
-  "https://i.ibb.co.com/zVjvqjGM/aerial-view-residence-bukovinian-dalmatian-metropolitans-chernivtsi-national-university-chernivtsi-t.jpg",
-  "https://i.ibb.co.com/xKSJTQqC/view-palace-culture-iasi-romania.jpg",
-  "https://i.ibb.co.com/Ndwx50jZ/college-students-1872810-1280.jpg",
+  "/images/education1.webp",
+  "/images/education2.webp",
+  "/images/education3.webp",
 ];
 
 const SlideshowBackground = ({ images, overlayColor, children }) => {
@@ -91,7 +91,7 @@ const App = () => {
         <div className="text-white font-bold">
           <img
             className="w-sm md:w-lg"
-            src="https://i.ibb.co/5X9d7Y1m/logo-2.png"
+            src="/logo-2.png"
             alt="Fly Ambition Logo"
           />
         </div>

@@ -21,7 +21,7 @@ const EmploymentServices = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 pt-30">
       {/* Hero Section */}
     <Hero
-      imageUrl="https://i.ibb.co.com/W42HnMg2/three-factory-workers-safety-hats-discussing-manufacture-plan.jpg"
+      imageUrl="/images/employment3.webp"
       title="Comprehensive Employment Services"
       subtitle="Your Gateway to Global Opportunities"
     />

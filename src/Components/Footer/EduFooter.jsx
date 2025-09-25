@@ -12,7 +12,7 @@ const EduFooter = () => {
             <div className="flex items-center space-x-2 mb-4">
               <img
                 className="w-44 object-contain"
-                src="https://i.ibb.co/5X9d7Y1m/logo-2.png"
+                src="/logo-2.png"
                 alt="Fly Ambition Logo"
               />
             </div>

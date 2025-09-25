@@ -99,15 +99,9 @@ const EducationNavbar = () => {
             <Link to="/" className="flex items-center space-x-3">
               <img
                 className="w-44"
-                src="https://i.ibb.co.com/gFFK208r/logo.png"
+                src="/logo.png"
                 alt="Fly Ambition Logo"
               />
-              <div className="text-gray-600 text-sm">
-                <div className="font-semibold">Education Consultant</div>
-                <div className="text-xs">
-                  Excellence in Education Consultancy
-                </div>
-              </div>
             </Link>
 
             {/* Desktop Right Links */}

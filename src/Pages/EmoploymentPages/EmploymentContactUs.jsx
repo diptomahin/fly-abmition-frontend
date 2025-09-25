@@ -30,7 +30,7 @@ const EmploymentContactUs = () => {
         </div>
       </section> */}
       <Hero
-        imageUrl="https://i.ibb.co.com/R4chh2Vr/construction-workers-sunset.jpg"
+        imageUrl="/images/employment2.webp"
         title="Get in Touch"
         subtitle="Ready to take flight to your global career? Let's discuss your international opportunities and make your dreams a reality."
       />

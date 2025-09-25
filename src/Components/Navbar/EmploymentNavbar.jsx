@@ -40,7 +40,7 @@ const EmploymentNavbar = () => {
             <div className="text-3xl font-bold flex items-center">
               <img
                 className="w-56"
-                src="https://i.ibb.co.com/gFFK208r/logo.png"
+                src="/logo.png"
                 alt="Fly Ambition Logo"
               />
             </div>
