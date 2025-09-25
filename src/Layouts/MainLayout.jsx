@@ -5,7 +5,9 @@ const MainLayout = () => {
   return (
     <>
       <ScrollToTop />
-      <Outlet /> {/* Render the child routes here */}
+            <div className="overflow-x-hidden m-0 p-0">
+        <Outlet /> {/* Render the child routes here */}
+      </div>
     </>
   );
 };

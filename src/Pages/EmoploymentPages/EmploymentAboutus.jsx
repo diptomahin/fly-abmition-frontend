@@ -188,7 +188,7 @@ const EmploymentAboutus = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Mission */}
             <div
-              className="bg-gradient-to-br from-[#4f2e89] to-orange-700 rounded-3xl p-8 text-white shadow-2xl"
+              className="overflow-x-hidden bg-gradient-to-br from-[#4f2e89] to-orange-700 rounded-3xl p-8 text-white shadow-2xl"
               data-aos="fade-right"
             >
               <div className="flex items-center gap-4 mb-6">
@@ -209,7 +209,7 @@ const EmploymentAboutus = () => {
 
             {/* Vision */}
             <div
-              className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl p-8 text-white shadow-2xl"
+              className="overflow-x-hidden bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl p-8 text-white shadow-2xl"
               data-aos="fade-left"
             >
               <div className="flex items-center gap-4 mb-6">

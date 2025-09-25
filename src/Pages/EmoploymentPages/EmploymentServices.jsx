@@ -104,7 +104,7 @@ const EmploymentServices = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
-            <div data-aos="fade-right" data-aos-duration="1200">
+            <div className="overflow-x-hidden" data-aos="fade-right" data-aos-duration="1200">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Why Choose{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">
@@ -153,7 +153,7 @@ const EmploymentServices = () => {
 
             {/* Stats */}
             <div
-              className="bg-gradient-to-br from-[#4f2e89] to-orange-700 rounded-3xl p-8 text-white"
+              className="overflow-x-hidden bg-gradient-to-br from-[#4f2e89] to-orange-700 rounded-3xl p-8 text-white"
               data-aos="fade-left"
               data-aos-duration="1200"
             >

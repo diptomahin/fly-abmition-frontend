@@ -34,7 +34,7 @@ const EmploymentContactUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <a href="https://wa.me/8801616841627">
               <div
-                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                className="bg-white overflow-x-hidden rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
                 data-aos="fade-right"
               >
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -72,7 +72,7 @@ const EmploymentContactUs = () => {
             </a>
             <a href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw">
               <div
-                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                className="bg-white overflow-x-hidden rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
                 data-aos="fade-left"
               >
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -51,12 +51,12 @@ const EducationServices = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
+        <div className="relative pt-10 z-10 container mx-auto px-6 h-full flex items-center">
           <div className="max-w-4xl" data-aos="fade-up">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Your Pathway to Global Education
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed max-w-3xl">
+            <p className= "text-lg md:text-xl  text-white/90 leading-relaxed max-w-3xl">
               At FlyAmbition, we guide students to pursue their dream education
               abroad. From counseling and application assistance to visa
               processing and scholarship guidance, we make studying overseas

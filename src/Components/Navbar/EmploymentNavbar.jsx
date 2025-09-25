@@ -33,7 +33,7 @@ const EmploymentNavbar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-50 py-5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to={"/"}>
@@ -48,7 +48,7 @@ const EmploymentNavbar = () => {
           <div className="flex flex-col items-center gap-3">
             <h1 className="hidden md:flex text-xl font-semibold gap-1 mx-auto">
               {staticText}
-              <span className="text-orange-500 inline-block min-w-[100px] ">
+              <span className="text-orange-500 inline-block ">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={rotatingTexts[index]}

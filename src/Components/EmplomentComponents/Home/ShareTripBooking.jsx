@@ -35,9 +35,9 @@ export default function ShareTripBooking() {
 
   
   return (
-    <div className=" relative overflow-hidden">
+    <div className=" relative overflow-x-hidden ">
       <video
-        className="absolute inset-0 w-full h-2/3 object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         loop
         muted
@@ -57,7 +57,7 @@ export default function ShareTripBooking() {
         </div>
 
         {/* Main Booking Card - Exact match */}
-        <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden border-2 border-purple-500">
+        <div className=" mx-auto bg-white rounded-lg shadow-xl overflow-hidden border-2 border-purple-500">
           {/* Navigation Tabs - Exact styling */}
           <div className="flex border-b border-gray-200">
             {tabs.map((tab) => {
