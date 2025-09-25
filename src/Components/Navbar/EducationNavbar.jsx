@@ -99,7 +99,7 @@ const EducationNavbar = () => {
             <Link to="/" className="flex items-center space-x-3">
               <img
                 className="w-44"
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Fly Ambition Logo"
               />
             </Link>

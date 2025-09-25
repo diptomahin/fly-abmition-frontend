@@ -1,15 +1,9 @@
-import React from 'react';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  MessageSquare,
-  Clock,
-} from 'lucide-react';
-import ContactForm from '../../Components/EmplomentComponents/Forms/ContactForm';
-import Statistics from '../../Components/EmplomentComponents/Sections/statistics';
-import Hero from '../../Components/EmplomentComponents/Sections/Hero';
-import Cta from '../../Components/EmplomentComponents/Sections/Cta';
+import React from "react";
+import { Mail, Phone, MapPin, MessageSquare, Clock } from "lucide-react";
+import ContactForm from "../../Components/EmplomentComponents/Forms/ContactForm";
+import Statistics from "../../Components/EmplomentComponents/Sections/statistics";
+import Hero from "../../Components/EmplomentComponents/Sections/Hero";
+import Cta from "../../Components/EmplomentComponents/Sections/Cta";
 
 const EmploymentContactUs = () => {
   return (
@@ -38,42 +32,60 @@ const EmploymentContactUs = () => {
       <section className="py-16 my-5 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div 
-              className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
-              data-aos="fade-right"
-            >
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-[#4f2e89]" />
+            <a href="https://wa.me/8801616841627">
+              <div
+                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                data-aos="fade-right"
+              >
+                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-[#4f2e89]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+                <p className="text-gray-600 mb-2">
+                  Speak directly with our experts
+                </p>
+                <p className="text-[#4f2e89] font-semibold">
+                  {" "}
+                  01616-841627,
+                  <br />
+                  01616-841628,
+                  <br />
+                  01872-454000
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-              <p className="text-gray-600 mb-2">Speak directly with our experts</p>
-              <p className="text-[#4f2e89] font-semibold">+1 (555) 123-4567</p>
-            </div>
-
-            <div 
-              className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-[#4f2e89]" />
+            </a>
+            <a href="mailto:flyambitionbd@gmail.com">
+              <div
+                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-[#4f2e89]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+                <p className="text-gray-600 mb-2">Get detailed information</p>
+                <p className="text-[#4f2e89] font-semibold">
+                  flyambitionbd@gmail.com
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-2">Get detailed information</p>
-              <p className="text-[#4f2e89] font-semibold">info@flyambition.com</p>
-            </div>
-
-            <div 
-              className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
-              data-aos="fade-left"
-            >
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-[#4f2e89]" />
+            </a>
+            <a href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw">
+              <div
+                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                data-aos="fade-left"
+              >
+                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-[#4f2e89]" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
+                <p className="text-gray-600 mb-2">Meet us in person</p>
+                <p className="text-[#4f2e89] font-semibold">
+                  Level 2, Binimoy Complex, Dhaka-Mymensingh Highway, Auch Para,
+                  Tongi, Gazipur, Bangladesh
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
-              <p className="text-gray-600 mb-2">Meet us in person</p>
-              <p className="text-[#4f2e89] font-semibold">123 Career Street, City</p>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -116,18 +128,24 @@ const EmploymentContactUs = () => {
       </section> */}
       <Statistics></Statistics>
       {/* Response Time Section */}
-      <section 
+      <section
         className="py-12 bg-[#4f2e89]"
         data-aos="fade-up"
         data-aos-duration="1200"
       >
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="flex items-center justify-center mb-4" data-aos="zoom-in">
+          <div
+            className="flex items-center justify-center mb-4"
+            data-aos="zoom-in"
+          >
             <Clock className="w-8 h-8 text-white mr-3" />
-            <h3 className="text-2xl font-bold text-white">Quick Response Guarantee</h3>
+            <h3 className="text-2xl font-bold text-white">
+              Quick Response Guarantee
+            </h3>
           </div>
           <p className="text-red-100 text-lg">
-            Our expert consultants will respond to your inquiry within 2-4 hours during business hours
+            Our expert consultants will respond to your inquiry within 2-4 hours
+            during business hours
           </p>
         </div>
       </section>

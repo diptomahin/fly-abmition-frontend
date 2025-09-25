@@ -16,29 +16,33 @@ const imagesEducation = [
 
 const SlideshowBackground = ({ images, overlayColor, children }) => {
   const [index, setIndex] = useState(0);
+  const duration = 10000; // 10 seconds
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // change every 5 sec
+    }, duration);
     return () => clearInterval(interval);
   }, [images.length]);
 
+  // Preload the next image for smooth transition
+  useEffect(() => {
+    const nextIndex = (index + 1) % images.length;
+    const img = new Image();
+    img.src = images[nextIndex];
+  }, [index, images]);
+
   return (
     <div className="relative flex-1 overflow-hidden group">
-      {/* Background slideshow */}
-      {images.map((img, i) => (
-        <img
-          key={i}
-          src={img}
-          alt="Background"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+      {/* Only render current image */}
+      <img
+        src={images[index]}
+        alt="Background"
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+        loading="lazy"
+      />
 
-      {/* Persistent subtle dark gradient for readability */}
+      {/* Persistent subtle dark gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-black-200 via-black-300to-transparent"></div>
 
       {/* Colored overlay on hover */}
@@ -91,7 +95,7 @@ const App = () => {
         <div className="text-white font-bold">
           <img
             className="w-sm md:w-lg"
-            src="/logo-2.png"
+            src="/logo-2.webp"
             alt="Fly Ambition Logo"
           />
         </div>

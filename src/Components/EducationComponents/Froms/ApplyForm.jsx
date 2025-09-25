@@ -32,7 +32,9 @@ const ApplyForm = () => {
                     Office Address
                   </h3>
                   <p className="text-gray-600">
-                    Level 2, Binimoy Complex,<br /> Dhaka- Mymensingh Highway, Tongi, Gazipur, Bangladesh,
+                    Level 2, Binimoy Complex,
+                    <br /> Dhaka- Mymensingh Highway, Tongi, Gazipur,
+                    Bangladesh,
                   </p>
                 </div>
               </a>
@@ -47,7 +49,14 @@ const ApplyForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Phone Number</h3>
-                  <p className="text-gray-600">+88 016-16841627</p>
+                  <p className="text-gray-600">
+                    {" "}
+                    01616-841627,
+                    <br />
+                    01616-841628,
+                    <br />
+                    01872-454000
+                  </p>
                 </div>
               </a>
 
