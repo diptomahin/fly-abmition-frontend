@@ -16,7 +16,12 @@ import EducationContact from "../Pages/EducationPages/EducationContact";
 import ApplyNow from "../Pages/EmoploymentPages/ApplyNow";
 import EduApplyNow from "../Pages/EducationPages/EduApplyNow";
 import MainLayout from "../Layouts/MainLayout";
-
+import DashboardLayout from "../Layouts/DashboardLayout";
+import AddStories from "../Pages/Dashboard/AddStories";
+import ManageStories from "../Pages/Dashboard/ManageStories";
+import UpdateStories from "../Pages/Dashboard/UpdateStories";
+import Welcome from "../Pages/Dashboard/Welcome";
+import ProtectedDashboardLayout from "../Layouts/ProtectedDashboardLayout";
 const router = createBrowserRouter([
   {
     element: <MainLayout />, // Wrap all routes
@@ -51,6 +56,17 @@ const router = createBrowserRouter([
           { path: "applynow", element: <ApplyNow /> },
         ],
       },
+      {
+        path: "/dashboard",
+        element: <ProtectedDashboardLayout />,
+        errorElement: <ErrorElement />,
+        children: [
+          { path: "/dashboard", element: <Welcome /> },
+          { path: "/dashboard/add-stories", element: <AddStories /> },
+          { path: "/dashboard/manage-stories", element: <ManageStories /> },
+          { path: "/dashboard/update-stories/:id", element: <UpdateStories /> },
+        ],
+      }
     ],
   },
 ]);

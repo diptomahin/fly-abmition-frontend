@@ -1,10 +1,83 @@
-import React from "react";
+import React, { useState } from "react";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
+import Swal from "sweetalert2";
+
 const ApplyForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  // Handle input change
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Handle submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.phone) {
+      Swal.fire({
+        icon: "warning",
+        title: "Missing Information",
+        text: "Please fill in Name, Email, and Phone before submitting.",
+      });
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/send-education-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "We’ll get back to you within 24 hours.",
+          timer: 3000,
+          showConfirmButton: false,
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Server Error",
+        text: "Something went wrong! Please try again later.",
+      });
+    }
+  };
+
   return (
     <div>
       {/* Contact Info + Form Section */}
-      <section className=" bg-white">
+      <section className="bg-white">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div data-aos="fade-right">
@@ -50,7 +123,6 @@ const ApplyForm = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900">Phone Number</h3>
                   <p className="text-gray-600">
-                    {" "}
                     01616-841627,
                     <br />
                     01616-841628,
@@ -84,25 +156,33 @@ const ApplyForm = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Message For Consultation
             </h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">
-                    Full Name
+                    Full Name *
                   </label>
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     placeholder="Enter your full name"
+                    required
                     className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">
-                    Email Address
+                    Email Address *
                   </label>
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
                     placeholder="Enter your email"
+                    required
                     className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
                 </div>
@@ -111,11 +191,15 @@ const ApplyForm = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-gray-700 font-medium mb-2">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                     placeholder="+880 1234 567 890"
+                    required
                     className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
                 </div>
@@ -125,6 +209,9 @@ const ApplyForm = () => {
                   </label>
                   <input
                     type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
                     placeholder="Enter subject"
                     className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                   />
@@ -137,6 +224,9 @@ const ApplyForm = () => {
                 </label>
                 <textarea
                   rows="5"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   placeholder="Write your message here..."
                   className="w-full p-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#4f2e89]"
                 ></textarea>
@@ -144,7 +234,7 @@ const ApplyForm = () => {
 
               <button
                 type="submit"
-                className="w-full bg-[#4f2e89] text-white py-3 rounded-xl font-semibold hover:bg-orange-700 transition-colors flex items-center justify-center gap-2"
+                className="w-full hover:bg-orange-700 bg-[#4f2e89] text-white py-3 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2"
               >
                 <Send size={20} />
                 Send Message

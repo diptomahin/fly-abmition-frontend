@@ -11,6 +11,7 @@ import {
   Award,
   CheckCircle,
 } from "lucide-react";
+import Swal from "sweetalert2";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -33,12 +34,65 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!formData.name || !formData.email || !formData.mobile) {
+    Swal.fire({
+      icon: "warning",
+      title: "Missing Information",
+      text: "Please fill in Name, Email, and Mobile before submitting.",
+    });
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:5000/send-form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      Swal.fire({
+        icon: "success",
+        title: "Form Submitted!",
+        text: "We’ll get back to you within 24 hours.",
+        timer: 3000,
+        showConfirmButton: false,
+      });
+
+      setIsSubmitted(true);
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        desiredJob: "",
+        destination: "",
+        location: "",
+        skills: "",
+        message: "",
+      });
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Failed to submit form. Please try again.",
+      });
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    Swal.fire({
+      icon: "error",
+      title: "Server Error",
+      text: "Something went wrong! Please try again later.",
+    });
+  }
+};
+
+
 
   return (
     <div className="mb-7">
@@ -67,6 +121,7 @@ const ContactForm = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
+                    required
                     placeholder="Enter your full name"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200"
                   />
@@ -82,6 +137,7 @@ const ContactForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
+                    required
                     placeholder="Enter your email"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200"
                   />
@@ -101,6 +157,7 @@ const ContactForm = () => {
                     onChange={handleInputChange}
                     placeholder="Enter your mobile number"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200"
+                    required
                   />
                 </div>
 
