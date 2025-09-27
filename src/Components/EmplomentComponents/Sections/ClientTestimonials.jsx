@@ -8,7 +8,7 @@ const ClientTestimonials = () => {
   // Fetch testimonials from backend
   const fetchTestimonials = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/testimonials"); // replace with your API
+      const res = await fetch("https://api.flyambitionbd.com/api/testimonials"); // replace with your API
       const data = await res.json();
       if (data.success) {
         setTestimonials(data.data);
@@ -99,7 +99,7 @@ const ClientTestimonials = () => {
                         <div className="relative w-full flex justify-center">
                           {testimonial.image ? (
                             <img
-                              src={`http://localhost:5000/${testimonial.image}`}
+                              src={`https://api.flyambitionbd.com/${testimonial.image}`}
                               alt={testimonial.author}
                               className="w-64 h-80 object-cover rounded-lg border-4 border-yellow-400 shadow-2xl"
                             />

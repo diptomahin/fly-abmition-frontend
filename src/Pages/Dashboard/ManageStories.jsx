@@ -9,7 +9,7 @@ const ManageStories = () => {
   // Fetch all testimonials from backend
   const fetchStories = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/testimonials");
+      const res = await fetch("https://api.flyambitionbd.com/api/testimonials");
       const data = await res.json();
       if (data.success) {
         setStories(data.data);
@@ -42,7 +42,7 @@ const ManageStories = () => {
 
     if (confirm.isConfirmed) {
       try {
-        const res = await fetch(`http://localhost:5000/api/testimonials/${_id}`, {
+        const res = await fetch(`https://api.flyambitionbd.com/api/testimonials/${_id}`, {
           method: "DELETE",
         });
         const result = await res.json();
@@ -73,7 +73,7 @@ const ManageStories = () => {
       try {
         const formData = new FormData();
         formData.append("text", newText.value);
-        const res = await fetch(`http://localhost:5000/api/testimonials/${story._id}`, {
+        const res = await fetch(`https://api.flyambitionbd.com/api/testimonials/${story._id}`, {
           method: "PUT",
           body: formData,
         });
@@ -113,7 +113,7 @@ const ManageStories = () => {
             <div className="w-full h-48 mb-4 relative">
               {story.image ? (
                 <img
-                  src={`http://localhost:5000/${story.image}`}
+                  src={`https://api.flyambitionbd.com/${story.image}`}
                   alt={story.author}
                   className="w-full h-full object-cover rounded-xl"
                 />

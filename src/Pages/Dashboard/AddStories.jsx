@@ -27,7 +27,7 @@ const AddStories = () => {
     if (image) data.append("image", image);
 
     try {
-      const res = await fetch("http://localhost:5000/api/testimonials", {
+      const res = await fetch("https://api.flyambitionbd.com/api/testimonials", {
         method: "POST",
         body: data,
       });
