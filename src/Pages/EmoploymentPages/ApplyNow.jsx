@@ -3,7 +3,7 @@ import ContactForm from '../../Components/EmplomentComponents/Forms/ContactForm'
 
 const ApplyNow = () => {
   return (
-    <div className='pt-30'>
+    <div className='pt-32'>
      <ContactForm></ContactForm>
     </div>
   )

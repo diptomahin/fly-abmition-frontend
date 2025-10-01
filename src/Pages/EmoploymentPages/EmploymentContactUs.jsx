@@ -32,9 +32,9 @@ const EmploymentContactUs = () => {
       <section className="py-16 my-5 relative z-10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <a href="https://wa.me/8801616841627">
+            <a href="https://wa.me/8801616841627" className="h-full">
               <div
-                className="bg-white overflow-x-hidden rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 h-full flex flex-col"
                 data-aos="fade-right"
               >
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -45,7 +45,6 @@ const EmploymentContactUs = () => {
                   Speak directly with our experts
                 </p>
                 <p className="text-[#4f2e89] font-semibold">
-                  {" "}
                   01616-841627,
                   <br />
                   01616-841628,
@@ -54,9 +53,10 @@ const EmploymentContactUs = () => {
                 </p>
               </div>
             </a>
-            <a href="mailto:flyambitionbd@gmail.com">
+
+            <a href="mailto:flyambitionbd@gmail.com" className="h-full">
               <div
-                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 h-full flex flex-col"
                 data-aos="zoom-in"
                 data-aos-delay="200"
               >
@@ -67,12 +67,20 @@ const EmploymentContactUs = () => {
                 <p className="text-gray-600 mb-2">Get detailed information</p>
                 <p className="text-[#4f2e89] font-semibold">
                   flyambitionbd@gmail.com
+                  <br />
+                  hr@flyambitionbd.com
+                  <br />
+                  info@flyambitionbd.com
                 </p>
               </div>
             </a>
-            <a href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw">
+
+            <a
+              href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw"
+              className="h-full"
+            >
               <div
-                className="bg-white overflow-x-hidden rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300"
+                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 h-full flex flex-col"
                 data-aos="fade-left"
               >
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -81,8 +89,8 @@ const EmploymentContactUs = () => {
                 <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
                 <p className="text-gray-600 mb-2">Meet us in person</p>
                 <p className="text-[#4f2e89] font-semibold">
-                  Level 2, Binimoy Complex, Dhaka-Mymensingh Highway, Auch Para,
-                  Tongi, Gazipur, Bangladesh
+                  H-1, Level 2, Binimoy Complex, Dhaka- Mymensingh Highway, Auch
+                  Para, Nishat Nagar- 1711, Tongi West, Gazipur.
                 </p>
               </div>
             </a>

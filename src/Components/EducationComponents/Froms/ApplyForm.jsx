@@ -33,11 +33,14 @@ const ApplyForm = () => {
     }
 
     try {
-      const response = await fetch("https://api.flyambitionbd.com/send-education-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://api.flyambitionbd.com/send-education-form",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
       if (result.success) {
@@ -105,9 +108,7 @@ const ApplyForm = () => {
                     Office Address
                   </h3>
                   <p className="text-gray-600">
-                    Level 2, Binimoy Complex,
-                    <br /> Dhaka- Mymensingh Highway, Tongi, Gazipur,
-                    Bangladesh,
+                    H-1, Level 2, Binimoy Complex, <br /> Dhaka- Mymensingh Highway, Auch Para, <br /> Nishat Nagar- 1711, Tongi West, Gazipur.
                   </p>
                 </div>
               </a>
@@ -142,7 +143,13 @@ const ApplyForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email Address</h3>
-                  <p className="text-gray-600">flyambitionbd@gmail.com</p>
+                  <p className="text-gray-600">
+                    flyambitionbd@gmail.com
+                    <br />
+                    hr@flyambitionbd.com
+                    <br />
+                    info@flyambitionbd.com
+                  </p>
                 </div>
               </a>
             </div>

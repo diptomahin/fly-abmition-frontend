@@ -80,7 +80,7 @@ const EduImpact = () => {
                     <div className="text-3xl font-bold mb-1">
                       <CountUp
                         end={stat.number}
-                        duration={3}
+                        duration={7}
                         enableScrollSpy
                         scrollSpyOnce
                       />

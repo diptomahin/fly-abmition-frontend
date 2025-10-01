@@ -66,7 +66,7 @@ const router = createBrowserRouter([
           { path: "/dashboard/manage-stories", element: <ManageStories /> },
           { path: "/dashboard/update-stories/:id", element: <UpdateStories /> },
         ],
-      }
+      },
     ],
   },
 ]);

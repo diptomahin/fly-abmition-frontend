@@ -14,6 +14,7 @@ import {
   Phone,
   MessageCircle,
 } from "lucide-react";
+import { Link } from "react-router";
 const ServicesComponent = () => {
   const [activeTab, setActiveTab] = useState("worker");
   const [selectedService, setSelectedService] = useState(null);
@@ -58,7 +59,7 @@ const ServicesComponent = () => {
       ],
       category: "documentation",
     },
-        {
+    {
       icon: <Plane className="text-blue-600" size={48} />,
       title: "Air Ticket",
       description:
@@ -164,7 +165,7 @@ const ServicesComponent = () => {
       ],
       category: "preparation",
     },
-        {
+    {
       icon: <Plane className="text-blue-600" size={48} />,
       title: "Air Ticket",
       description:
@@ -228,7 +229,8 @@ const ServicesComponent = () => {
     },
   ];
 
-  const currentServices = activeTab === "employer" ? employerServices : workerServices;
+  const currentServices =
+    activeTab === "employer" ? employerServices : workerServices;
   return (
     <div>
       <section className="py-10 bg-white">
@@ -276,7 +278,10 @@ const ServicesComponent = () => {
           </div>
 
           {/* Services Grid */}
-          <div  data-aos="zoom-in" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            data-aos="zoom-in"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
             {currentServices.map((service, index) => (
               <div
                 key={index}
@@ -318,10 +323,16 @@ const ServicesComponent = () => {
           </div>
         </div>
       </section>
-       {/* Service Detail Modal */}
+      {/* Service Detail Modal */}
       {selectedService && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={() => setSelectedService(null)}>
-          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedService(null)}
+        >
+          <div
+            className="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="p-8">
               <div className="flex justify-between items-start mb-6">
                 <div className="flex items-center gap-4">
@@ -329,33 +340,44 @@ const ServicesComponent = () => {
                     {selectedService.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{selectedService.title}</h3>
-                    <p className="text-gray-600 capitalize">{selectedService.category}</p>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {selectedService.title}
+                    </h3>
+                    <p className="text-gray-600 capitalize">
+                      {selectedService.category}
+                    </p>
                   </div>
                 </div>
-                <button 
+                <button
                   onClick={() => setSelectedService(null)}
                   className="text-gray-400 hover:text-gray-600 text-2xl"
                 >
                   ×
                 </button>
               </div>
-              
-              <p className="text-gray-700 mb-6 leading-relaxed">{selectedService.description}</p>
-              
+
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                {selectedService.description}
+              </p>
+
               <h4 className="font-bold text-gray-900 mb-4">Key Features:</h4>
               <div className="space-y-3 mb-6">
                 {selectedService.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
-                    <CheckCircle className="text-green-500 flex-shrink-0" size={18} />
+                    <CheckCircle
+                      className="text-green-500 flex-shrink-0"
+                      size={18}
+                    />
                     <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}
               </div>
-              
-              <button className="w-full bg-[#4f2e89] text-white py-3 rounded-xl font-semibold hover:bg-orange-700 transition-colors">
-                Get Started
-              </button>
+
+              <Link to={'/employment/applynow'}>
+                <button className="w-full bg-[#4f2e89] text-white py-3 rounded-xl font-semibold hover:bg-orange-700 transition-colors">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
         </div>

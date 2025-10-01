@@ -15,16 +15,18 @@ import {
 import ServicesComponent from "../../Components/EmplomentComponents/Sections/ServicesComponent";
 import Hero from "../../Components/EmplomentComponents/Sections/Hero";
 import Cta from "../../Components/EmplomentComponents/Sections/Cta";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const EmploymentServices = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 pt-30">
       {/* Hero Section */}
-    <Hero
-      imageUrl="/images/employment3.webp"
-      title="Comprehensive Employment Services"
-      subtitle="Your Gateway to Global Opportunities"
-    />
+      <Hero
+        imageUrl="/images/employment3.webp"
+        title="Comprehensive Employment Services"
+        subtitle="Your Gateway to Global Opportunities"
+      />
       {/* Services Section */}
       <div data-aos="fade-up" data-aos-duration="1200">
         <ServicesComponent />
@@ -104,7 +106,11 @@ const EmploymentServices = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
-            <div className="overflow-x-hidden" data-aos="fade-right" data-aos-duration="1200">
+            <div
+              className="overflow-x-hidden"
+              data-aos="fade-right"
+              data-aos-duration="1200"
+            >
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Why Choose{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4f2e89] to-orange-700">
@@ -136,7 +142,12 @@ const EmploymentServices = () => {
                     desc: "98% successful placement rate with ongoing support",
                   },
                 ].map((item, index) => (
-                  <div key={index} className="flex gap-4" data-aos="fade-up" data-aos-delay={index * 200}>
+                  <div
+                    key={index}
+                    className="flex gap-4"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 200}
+                  >
                     <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-[#4f2e89] flex-shrink-0">
                       {item.icon}
                     </div>
@@ -162,21 +173,40 @@ const EmploymentServices = () => {
               </h3>
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: "5000+", label: "Workers Placed" },
-                  { number: "200+", label: "Partner Companies" },
-                  { number: "25+", label: "Countries" },
-                  { number: "98%", label: "Success Rate" },
-                ].map((stat, index) => (
-                  <div
-                    key={index}
-                    className="text-center"
-                    data-aos="zoom-in"
-                    data-aos-delay={index * 200}
-                  >
-                    <div className="text-3xl font-bold mb-1">{stat.number}</div>
-                    <div className="text-white/80 text-sm">{stat.label}</div>
-                  </div>
-                ))}
+                  { number: 3784, label: "Workers Placed" },
+                  { number: 132, label: "Partner Companies" },
+                  { number: 25, label: "Countries" },
+                  { number: 95, label: "Success Rate" },
+                ].map((stat, index) => {
+                  const { ref, inView } = useInView({
+                    triggerOnce: true,
+                    threshold: 0.3,
+                  });
+
+                  return (
+                    <div
+                      key={index}
+                      ref={ref}
+                      className="text-center"
+                      data-aos="zoom-in"
+                      data-aos-delay={index * 200}
+                    >
+                      <div className="text-3xl font-bold mb-1">
+                        {inView ? (
+                          <CountUp
+                            start={0}
+                            end={stat.number}
+                            duration={7} // animate over 4s
+                            suffix={stat.suffix}
+                          />
+                        ) : (
+                          `0${stat.suffix}`
+                        )}
+                      </div>
+                      <div className="text-white/80 text-sm">{stat.label}</div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

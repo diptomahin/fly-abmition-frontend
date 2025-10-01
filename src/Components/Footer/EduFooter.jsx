@@ -163,8 +163,10 @@ const EduFooter = () => {
               <div>
                 <p className="text-gray-400 text-sm">Call Us</p>
                 <p className="text-white font-semibold ">
-                  01616-841627,<br />
-                  01616-841628,<br />
+                  01616-841627,
+                  <br />
+                  01616-841628,
+                  <br />
                   01872-454000
                 </p>
               </div>
@@ -180,6 +182,10 @@ const EduFooter = () => {
                 <p className="text-gray-400 text-sm">Email Us</p>
                 <p className="text-white font-semibold">
                   flyambitionbd@gmail.com
+                  <br />
+                  hr@flyambitionbd.com
+                  <br />
+                  info@flyambitionbd.com
                 </p>
               </div>
             </a>
@@ -195,8 +201,7 @@ const EduFooter = () => {
               <div>
                 <p className="text-gray-400 text-sm">Visit Us</p>
                 <p className="text-white font-semibold">
-                  Level 2, Binimoy Complex, Dhaka-Mymensingh Highway, Auch Para,
-                  Tongi, Gazipur, Bangladesh
+                  H-1, Level 2, Binimoy Complex, Dhaka- Mymensingh Highway, Auch Para, Nishat Nagar- 1711, Tongi West, Gazipur.
                 </p>
               </div>
             </a>

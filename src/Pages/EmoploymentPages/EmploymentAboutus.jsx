@@ -12,6 +12,7 @@ import { TeamMembers } from "../../Components/EmplomentComponents/Sections/TeamM
 import Statistics from "../../Components/EmplomentComponents/Sections/statistics";
 import Hero from "../../Components/EmplomentComponents/Sections/Hero";
 import Cta from "../../Components/EmplomentComponents/Sections/Cta";
+import { Link } from "react-router";
 
 const EmploymentAboutus = () => {
   const services = [
@@ -169,13 +170,15 @@ const EmploymentAboutus = () => {
                 data-aos="fade-up"
                 data-aos-delay="1000"
               >
-                <button className="group bg-gradient-to-r from-[#4f2e89] to-orange-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto">
-                  Start Your Journey
-                  <ArrowRight
-                    className="group-hover:translate-x-1 transition-transform"
-                    size={20}
-                  />
-                </button>
+                <Link to={'/employment/applynow'}>
+                  <button className="group bg-gradient-to-r from-[#4f2e89] to-orange-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-orange-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto">
+                    Start Your Journey
+                    <ArrowRight
+                      className="group-hover:translate-x-1 transition-transform"
+                      size={20}
+                    />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
