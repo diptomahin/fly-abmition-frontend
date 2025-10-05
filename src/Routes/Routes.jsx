@@ -19,9 +19,9 @@ import MainLayout from "../Layouts/MainLayout";
 import DashboardLayout from "../Layouts/DashboardLayout";
 import AddStories from "../Pages/Dashboard/AddStories";
 import ManageStories from "../Pages/Dashboard/ManageStories";
-import UpdateStories from "../Pages/Dashboard/UpdateStories";
 import Welcome from "../Pages/Dashboard/Welcome";
 import ProtectedDashboardLayout from "../Layouts/ProtectedDashboardLayout";
+import UpdateStory from "../Pages/Dashboard/UpdateStory";
 const router = createBrowserRouter([
   {
     element: <MainLayout />, // Wrap all routes
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
           { path: "/dashboard", element: <Welcome /> },
           { path: "/dashboard/add-stories", element: <AddStories /> },
           { path: "/dashboard/manage-stories", element: <ManageStories /> },
-          { path: "/dashboard/update-stories/:id", element: <UpdateStories /> },
+          { path: "/dashboard/update-story/:id", element: <UpdateStory /> },
         ],
       },
     ],

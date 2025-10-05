@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Quote, ChevronLeft, ChevronRight, MapPin, FileText, CheckCircle, Star } from "lucide-react";
+import {
+  Quote,
+  ChevronLeft,
+  ChevronRight,
+  MapPin,
+  CheckCircle,
+  Star,
+} from "lucide-react";
 
 const ClientTestimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -8,10 +15,12 @@ const ClientTestimonials = () => {
   // Fetch testimonials from backend
   const fetchTestimonials = async () => {
     try {
-      const res = await fetch("https://api.flyambitionbd.com/api/testimonials"); // replace with your API
+      const res = await fetch("https://api.flyambitionbd.com/api/testimonials");
       const data = await res.json();
       if (data.success) {
-        setTestimonials(data.data);
+        // ✅ Only include Employment testimonials (not Students)
+        const filtered = data.data.filter((t) => t.role !== "Student");
+        setTestimonials(filtered);
       }
     } catch (err) {
       console.error("Failed to fetch testimonials:", err);
@@ -22,8 +31,9 @@ const ClientTestimonials = () => {
     fetchTestimonials();
   }, []);
 
-  // Auto-slide
+  // Auto-slide every 5 seconds
   useEffect(() => {
+    if (testimonials.length === 0) return;
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 5000);
@@ -31,24 +41,37 @@ const ClientTestimonials = () => {
   }, [testimonials.length]);
 
   if (testimonials.length === 0) {
-    return <p className="text-center mt-10 text-gray-500">No testimonials available.</p>;
+    return (
+      <p className="text-center mt-10 text-gray-500">
+        No employment testimonials available.
+      </p>
+    );
   }
 
   return (
-    <div data-aos="fade-down" className="bg-gradient-to-br from-gray-800 to-gray-900 py-20 overflow-hidden">
+    <div
+      data-aos="fade-down"
+      className="bg-gradient-to-br from-gray-800 to-gray-900 py-20 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white mb-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Client <span className="text-red-400">Testimonials</span>
+            Employment <span className="text-red-400">Stories</span>
           </h2>
-          <p className="text-xl opacity-80">Success stories from around the globe</p>
+          <p className="text-xl opacity-80">
+            Inspiring career journeys from around the world
+          </p>
         </div>
 
         <div className="relative">
           {/* Navigation buttons */}
           <button
             onClick={() =>
-              setCurrentTestimonial(currentTestimonial === 0 ? testimonials.length - 1 : currentTestimonial - 1)
+              setCurrentTestimonial(
+                currentTestimonial === 0
+                  ? testimonials.length - 1
+                  : currentTestimonial - 1
+              )
             }
             className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full p-3 text-white hover:bg-white/20 transition-all duration-300"
           >
@@ -56,7 +79,9 @@ const ClientTestimonials = () => {
           </button>
 
           <button
-            onClick={() => setCurrentTestimonial((currentTestimonial + 1) % testimonials.length)}
+            onClick={() =>
+              setCurrentTestimonial((currentTestimonial + 1) % testimonials.length)
+            }
             className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full p-3 text-white hover:bg-white/20 transition-all duration-300"
           >
             <ChevronRight className="w-6 h-6" />
@@ -84,11 +109,17 @@ const ClientTestimonials = () => {
                             {testimonial.author[0]}
                           </div>
                           <div>
-                            <p className="font-bold text-white">{testimonial.author}</p>
-                            <p className="text-red-300 font-semibold">{testimonial.role}</p>
+                            <p className="font-bold text-white">
+                              {testimonial.author}
+                            </p>
+                            <p className="text-red-300 font-semibold">
+                              {testimonial.role || "Employee"}
+                            </p>
                             <div className="flex items-center gap-2 mt-1">
                               <MapPin className="w-4 h-4 text-gray-300" />
-                              <span className="text-gray-300">{testimonial.country}</span>
+                              <span className="text-gray-300">
+                                {testimonial.country}
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -106,8 +137,12 @@ const ClientTestimonials = () => {
                           ) : (
                             <div className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-lg p-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300 w-64 h-80">
                               <div className="w-full h-full bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg border-4 border-yellow-400 relative overflow-hidden flex flex-col items-center justify-center">
-                                <div className="text-yellow-200 font-bold text-sm mb-2">PASSPORT</div>
-                                <div className="text-white font-semibold text-lg">{testimonial.country.toUpperCase()}</div>
+                                <div className="text-yellow-200 font-bold text-sm mb-2">
+                                  PASSPORT
+                                </div>
+                                <div className="text-white font-semibold text-lg">
+                                  {testimonial.country?.toUpperCase()}
+                                </div>
                                 <div className="mx-auto w-20 h-20 bg-gradient-to-br from-red-500 to-[#4f2e89] rounded-lg flex items-center justify-center text-white text-2xl font-bold mb-4">
                                   {testimonial.author[0]}
                                 </div>
@@ -142,7 +177,9 @@ const ClientTestimonials = () => {
                 key={index}
                 onClick={() => setCurrentTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentTestimonial ? "bg-red-500 scale-125" : "bg-white/30 hover:bg-white/50"
+                  index === currentTestimonial
+                    ? "bg-red-500 scale-125"
+                    : "bg-white/30 hover:bg-white/50"
                 }`}
               />
             ))}

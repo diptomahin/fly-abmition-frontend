@@ -10,7 +10,7 @@ export const TeamMembers = () => {
     {
       name: "Parvez",
       position: "HR Director",
-      avatar: "👩‍💼",
+      avatar: "👨‍💼",
       speciality: "Talent Acquisition",
     },
     {
@@ -22,7 +22,7 @@ export const TeamMembers = () => {
     {
       name: "Amzad Hossain",
       position: "Client Relations Head",
-      avatar: "👩‍💼",
+      avatar: "👨‍💼",
       speciality: "Customer Success",
     },
     {
