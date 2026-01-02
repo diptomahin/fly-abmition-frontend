@@ -36,7 +36,7 @@ const ClientTestimonials = () => {
     if (testimonials.length === 0) return;
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 15000);
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
@@ -132,6 +132,7 @@ const ClientTestimonials = () => {
                             <img
                               src={`https://api.flyambitionbd.com/${testimonial.image}`}
                               alt={testimonial.author}
+                              loading="eager" 
                               className="w-64 h-80 object-cover rounded-lg border-4 border-yellow-400 shadow-2xl"
                             />
                           ) : (

@@ -36,7 +36,7 @@ const EduTestimonials = () => {
     if (testimonials.length === 0) return;
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 15000);
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
@@ -56,7 +56,7 @@ const EduTestimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center text-white mb-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Employment <span className="text-red-400">Stories</span>
+            Success <span className="text-red-400">Stories</span>
           </h2>
           <p className="text-xl opacity-80">
             Inspiring career journeys from around the world

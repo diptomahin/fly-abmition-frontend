@@ -62,14 +62,6 @@ const Footer = () => {
               >
                 <MapPin className="w-5 h-5" />
               </a>
-              <a
-                href="https://flyambitionbd.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-700 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors"
-              >
-                <Globe className="w-5 h-5" />
-              </a>
             </div>
           </div>
 
