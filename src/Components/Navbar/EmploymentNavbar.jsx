@@ -37,7 +37,7 @@ const EmploymentNavbar = () => {
   }, []);
 
   const staticText = "Your very own immigration partner to";
-  const rotatingTexts = ["Schengen", "Gulf", "America", "South East Asia"];
+  const rotatingTexts = ["Schengen", "Gulf", "America", "South East Asia, China"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

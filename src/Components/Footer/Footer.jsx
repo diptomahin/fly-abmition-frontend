@@ -145,6 +145,14 @@ const Footer = () => {
                 />
                 America
               </li>
+              <li className="text-gray-300 hover:text-red-400 transition-colors flex items-center">
+                <img
+                  src="https://flagcdn.com/cn.svg"
+                  alt="China Flag"
+                  className="w-5 h-5 mr-3"
+                />
+                China
+              </li>
             </ul>
           </div>
         </div>
