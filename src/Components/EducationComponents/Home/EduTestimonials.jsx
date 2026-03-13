@@ -109,7 +109,7 @@ const EduTestimonials = () => {
                             className="w-80 h-52 md:w-96 md:h-72 object-cover rounded-xl border-4 border-yellow-400 shadow-2xl"
                           />
                         ) : (
-                          <div className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-lg p-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300 w-80 h-52 md:w-96 md:h-72">
+                          <div className="bg-gradient-to-br from-blue-800 to-blue-900 rounded-lg p-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300 w-80 h-52 md:w-96 md:h-72 ">
                             <div className="w-full h-full bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg border-4 border-yellow-400 relative overflow-hidden flex flex-col items-center justify-center">
                               <div className="text-yellow-200 font-bold text-sm mb-2">
                                 PASSPORT

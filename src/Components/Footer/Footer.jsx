@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Globe, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
+  const [showLocationPopup, setShowLocationPopup] = useState(false);
+
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
+            <div className="space-x-2 mb-4 justify-start">
               <img
-                className="w-44 object-contain"
-                src="/logo-2.webp"
+                className="w-56 object-contain"
+                src="/logo-2.png"
                 alt="Fly Ambition Logo"
               />
             </div>
@@ -54,14 +56,12 @@ const Footer = () => {
               >
                 <Mail className="w-5 h-5" />
               </a>
-              <a
-                href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => setShowLocationPopup(!showLocationPopup)}
                 className="bg-gray-700 p-3 rounded-lg hover:bg-[#4f2e89] transition-colors"
               >
                 <MapPin className="w-5 h-5" />
-              </a>
+              </button>
             </div>
           </div>
 
@@ -173,11 +173,9 @@ const Footer = () => {
                 <p className="text-gray-400 text-sm">Call Us</p>
                 <p className="text-white font-semibold">
                   {" "}
-                  01616-841627,
+                  01616-841627
                   <br />
-                  01616-841628,
-                  <br />
-                  01872-454000{" "}
+                  01616-841628
                 </p>
               </div>
             </a>
@@ -199,22 +197,20 @@ const Footer = () => {
                 </p>
               </div>
             </a>
-            <a
-              href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
+            <button
+              onClick={() => setShowLocationPopup(!showLocationPopup)}
+              className="flex items-center cursor-pointer"
             >
               <div className="bg-[#4f2e89] p-3 rounded-lg mr-4">
                 <MapPin className="w-5 h-5" />
               </div>
-              <div>
+              <div className="text-left">
                 <p className="text-gray-400 text-sm">Visit Us</p>
-                <p className="text-white font-semibold">
-                  H-1, Level 2, Binimoy Complex, Dhaka- Mymensingh Highway, Auch Para, Nishat Nagar- 1711, Tongi West, Gazipur.
+                <p className="text-white font-semibold text-sm hover:text-red-400 transition-colors">
+                  Click to see addresses
                 </p>
               </div>
-            </a>
+            </button>
           </div>
         </div>
 
@@ -247,6 +243,51 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Location Popup Modal */}
+      {showLocationPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gray-900 rounded-lg p-8 max-w-2xl w-full mx-4">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-semibold text-white flex items-center">
+                <MapPin className="w-6 h-6 mr-3 text-[#4f2e89]" />
+                Our Offices
+              </h2>
+              <button
+                onClick={() => setShowLocationPopup(false)}
+                className="text-gray-400 hover:text-white text-2xl"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              {/* Bangladesh Office */}
+              <div className="border border-gray-700 rounded-lg p-6 hover:border-[#4f2e89] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-2">Bangladesh Office</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  H-1, Level 2, Binimoy Complex, Dhaka- Mymensingh Highway, Auch Para, Nishat Nagar- 1711, Tongi West, Gazipur.
+                </p>
+              </div>
+
+              {/* China Office */}
+              <div className="border border-gray-700 rounded-lg p-6 hover:border-[#4f2e89] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-2">China Office</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  22F, Building B, World Trade Plaza, No. 9, Fuhong Road, Funan Community, Futian Subdistrict, Shenzhen City, China.
+                </p>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setShowLocationPopup(false)}
+              className="mt-6 w-full bg-[#4f2e89] hover:bg-[#6b3da8] text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </footer>
   );
 };

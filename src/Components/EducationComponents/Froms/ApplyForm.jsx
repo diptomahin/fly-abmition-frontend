@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 import Swal from "sweetalert2";
 
 const ApplyForm = () => {
+  const [showLocationPopup, setShowLocationPopup] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -94,24 +95,22 @@ const ApplyForm = () => {
 
             <div className="space-y-6">
               {/* Address */}
-              <a
-                href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-start gap-4 hover:scale-105 transition-transform"
+              <button
+                onClick={() => setShowLocationPopup(!showLocationPopup)}
+                className="flex items-start gap-4 hover:scale-105 transition-transform cursor-pointer w-full"
               >
                 <div className="w-12 h-12 flex items-center justify-center bg-red-100 text-[#4f2e89] rounded-xl hover:bg-[#4f2e89] hover:text-white transition-colors">
                   <MapPin size={24} />
                 </div>
-                <div>
+                <div className="text-left">
                   <h3 className="font-semibold text-gray-900">
                     Office Address
                   </h3>
                   <p className="text-gray-600">
-                    H-1, Level 2, Binimoy Complex, <br /> Dhaka- Mymensingh Highway, Auch Para, <br /> Nishat Nagar- 1711, Tongi West, Gazipur.
+                    Click to see our offices
                   </p>
                 </div>
-              </a>
+              </button>
 
               {/* Phone */}
               <a
@@ -124,11 +123,9 @@ const ApplyForm = () => {
                 <div>
                   <h3 className="font-semibold text-gray-900">Phone Number</h3>
                   <p className="text-gray-600">
-                    01616-841627,
+                    01616-841627
                     <br />
-                    01616-841628,
-                    <br />
-                    01872-454000
+                    01616-841628
                   </p>
                 </div>
               </a>
@@ -250,6 +247,51 @@ const ApplyForm = () => {
           </div>
         </div>
       </section>
+
+      {/* Location Popup Modal */}
+      {showLocationPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gray-900 rounded-lg p-8 max-w-2xl w-full mx-4">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-semibold text-white flex items-center">
+                <MapPin className="w-6 h-6 mr-3 text-[#4f2e89]" />
+                Our Offices
+              </h2>
+              <button
+                onClick={() => setShowLocationPopup(false)}
+                className="text-gray-400 hover:text-white text-2xl"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              {/* Bangladesh Office */}
+              <div className="border border-gray-700 rounded-lg p-6 hover:border-[#4f2e89] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-2">Bangladesh Office</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  H-1, Level 2, Binimoy Complex, Dhaka- Mymensingh Highway, Auch Para, Nishat Nagar- 1711, Tongi West, Gazipur.
+                </p>
+              </div>
+
+              {/* China Office */}
+              <div className="border border-gray-700 rounded-lg p-6 hover:border-[#4f2e89] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-2">China Office</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  22F, Building B, World Trade Plaza, No. 9, Fuhong Road, Funan Community, Futian Subdistrict, Shenzhen City, China.
+                </p>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setShowLocationPopup(false)}
+              className="mt-6 w-full bg-[#4f2e89] hover:bg-[#6b3da8] text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Mail, Phone, MapPin, MessageSquare, Clock } from "lucide-react";
 import ContactForm from "../../Components/EmplomentComponents/Forms/ContactForm";
 import Statistics from "../../Components/EmplomentComponents/Sections/statistics";
@@ -6,6 +6,7 @@ import Hero from "../../Components/EmplomentComponents/Sections/Hero";
 import Cta from "../../Components/EmplomentComponents/Sections/Cta";
 
 const EmploymentContactUs = () => {
+  const [showLocationPopup, setShowLocationPopup] = useState(false);
   return (
     <div className="min-h-screen bg-gray-50 pt-30">
       {/* Hero Section */}
@@ -45,11 +46,9 @@ const EmploymentContactUs = () => {
                   Speak directly with our experts
                 </p>
                 <p className="text-[#4f2e89] font-semibold">
-                  01616-841627,
+                  01616-841627
                   <br />
-                  01616-841628,
-                  <br />
-                  01872-454000
+                  01616-841628
                 </p>
               </div>
             </a>
@@ -75,12 +74,12 @@ const EmploymentContactUs = () => {
               </div>
             </a>
 
-            <a
-              href="https://maps.app.goo.gl/1QjWSv7THrUT2hnn8?g_st=aw"
-              className="h-full"
+            <button
+              onClick={() => setShowLocationPopup(!showLocationPopup)}
+              className="h-full w-full"
             >
               <div
-                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 h-full flex flex-col"
+                className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300 h-full flex flex-col cursor-pointer"
                 data-aos="fade-left"
               >
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -89,11 +88,10 @@ const EmploymentContactUs = () => {
                 <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
                 <p className="text-gray-600 mb-2">Meet us in person</p>
                 <p className="text-[#4f2e89] font-semibold">
-                  H-1, Level 2, Binimoy Complex, Dhaka- Mymensingh Highway, Auch
-                  Para, Nishat Nagar- 1711, Tongi West, Gazipur.
+                  Click to see our offices
                 </p>
               </div>
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -160,6 +158,51 @@ const EmploymentContactUs = () => {
 
       {/* Footer CTA */}
       <Cta></Cta>
+
+      {/* Location Popup Modal */}
+      {showLocationPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-gray-900 rounded-lg p-8 max-w-2xl w-full mx-4">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-semibold text-white flex items-center">
+                <MapPin className="w-6 h-6 mr-3 text-[#4f2e89]" />
+                Our Offices
+              </h2>
+              <button
+                onClick={() => setShowLocationPopup(false)}
+                className="text-gray-400 hover:text-white text-2xl"
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              {/* Bangladesh Office */}
+              <div className="border border-gray-700 rounded-lg p-6 hover:border-[#4f2e89] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-2">Bangladesh Office</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  H-1, Level 2, Binimoy Complex, Dhaka- Mymensingh Highway, Auch Para, Nishat Nagar- 1711, Tongi West, Gazipur.
+                </p>
+              </div>
+
+              {/* China Office */}
+              <div className="border border-gray-700 rounded-lg p-6 hover:border-[#4f2e89] transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-2">China Office</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  22F, Building B, World Trade Plaza, No. 9, Fuhong Road, Funan Community, Futian Subdistrict, Shenzhen City, China.
+                </p>
+              </div>
+            </div>
+
+            <button
+              onClick={() => setShowLocationPopup(false)}
+              className="mt-6 w-full bg-[#4f2e89] hover:bg-[#6b3da8] text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
